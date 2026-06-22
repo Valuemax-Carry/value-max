@@ -177,13 +177,6 @@ export default function Navbar() {
         </div>
       </nav>
 
-      <CartDrawer
-        cartOpen={cartOpen}
-        setCartOpen={setCartOpen}
-        cartItems={CART_ITEMS}
-        totalItems={totalItems}
-        totalPrice={totalPrice}
-      />
     </>
   );
 }
