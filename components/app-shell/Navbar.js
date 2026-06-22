@@ -84,18 +84,6 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-1.5 ml-auto shrink-0">
-            <button
-              onClick={() => { setCartOpen(!cartOpen); setMenuOpen(false); }}
-              className="p-2 rounded-lg border-none bg-transparent text-gray-600 hover:bg-red-50 hover:text-[#E8001C] hover:scale-[1.08] transition-all duration-150 cursor-pointer relative flex items-center justify-center"
-              aria-label="Cart"
-            >
-              <ShoppingCart size={22} />
-              {totalItems > 0 && (
-                <span className="absolute top-0.5 right-0.5 bg-[#E8001C] text-white text-[9px] font-bold min-w-[17px] h-[17px] rounded-full flex items-center justify-center border-2 border-white leading-none">
-                  {totalItems}
-                </span>
-              )}
-            </button>
 
             <button className="hidden md:block border-2 border-[#E8001C] text-[#E8001C] hover:bg-[#E8001C] hover:text-white hover:-translate-y-px bg-transparent text-[13px] font-semibold px-4 py-[7px] rounded-lg cursor-pointer transition-all duration-200 whitespace-nowrap">
               Sign In
