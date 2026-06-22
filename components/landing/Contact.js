@@ -10,8 +10,7 @@ const CONTACT_CARDS = [
       </svg>
     ),
     label: "Call Us",
-    value: "+92 300 1234567",
-    href: "tel:+923001234567",
+    value: "+966556179998 | +051-4947279",
   },
   {
     icon: (
@@ -21,8 +20,7 @@ const CONTACT_CARDS = [
       </svg>
     ),
     label: "Email Us",
-    value: "hello@valuemax.pk",
-    href: "mailto:hello@valuemax.pk",
+    value: "isaamir81@gmail.com",
   },
   {
     icon: (
@@ -32,8 +30,7 @@ const CONTACT_CARDS = [
       </svg>
     ),
     label: "Visit Us",
-    value: "Main Boulevard, Lahore, Pakistan",
-    href: "https://maps.google.com",
+    value: "Islam Plaza, Main Bazar, Chak Beli Khan, Postal Code 47600, Tehsil & District Rawalpindi",
   },
 ];
 
@@ -203,12 +200,11 @@ export default function Contact() {
 
           <div className="relative z-10 w-full lg:w-auto flex flex-col gap-4">
             {CONTACT_CARDS.map((c, i) => (
-              <a
+              <div
                 key={i}
-                href={c.href}
                 target={c.label === "Visit Us" ? "_blank" : undefined}
                 rel={c.label === "Visit Us" ? "noopener noreferrer" : undefined}
-                className="vm-c-card vm-c-icon-card flex items-center gap-4 bg-white border border-gray-100 rounded-2xl px-6 py-5 shadow-sm no-underline w-full lg:w-[360px]"
+                className="vm-c-card vm-c-icon-card flex items-center gap-4 cursor-pointer bg-white border border-gray-100 rounded-2xl px-6 py-5 shadow-sm no-underline w-full lg:w-[360px]"
               >
                 <div className="vm-c-icon-wrap shrink-0 w-12 h-12 rounded-xl bg-red-50 text-[#E8001C] flex items-center justify-center">
                   {c.icon}
@@ -217,7 +213,7 @@ export default function Contact() {
                   <div className="text-[11px] uppercase tracking-widest text-gray-400 font-semibold mb-0.5">{c.label}</div>
                   <div className="text-gray-900 text-[15px] font-semibold leading-snug">{c.value}</div>
                 </div>
-              </a>
+              </div>
             ))}
 
             {visible && (

@@ -223,7 +223,7 @@ export default function Hero() {
 
               <div className="flex items-center gap-2 mt-4 bg-white border border-gray-100 rounded-full px-4 py-2 shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-[12px] text-gray-500 font-medium">Store Open — Visit Us in Lahore</span>
+                <span className="text-[12px] text-gray-500 font-medium">Store Open — Visit Us in Rawalpindi</span>
               </div>
             </div>
           </div>
@@ -234,7 +234,7 @@ export default function Hero() {
             <div className="vm-ticker-track">
               {[...Array(2)].map((_, r) => (
                 <div key={r} className="flex items-center gap-0">
-                  {["📦 Wholesale Prices", "🛒 10,000+ Products", "🚚 Free Delivery above Rs. 2,000", "⭐ Pakistan's First Smartest Cash & Carry", "📍 Now Open in Lahore", "💛 Ashraf & Sons Traders", "📦 Bulk Orders Welcome", "🔥 New Deals Every Week"].map((item, i) => (
+                  {["📦 Wholesale Prices", "🛒 10,000+ Products", "🚚 Free Delivery above Rs. 2,000", "⭐ Pakistan's First Smartest Cash & Carry", "📍 Now Open in Rawalpindi", "💛 Ashraf & Sons Traders", "📦 Bulk Orders Welcome", "🔥 New Deals Every Week"].map((item, i) => (
                     <span key={i} className="text-white text-[13px] font-semibold whitespace-nowrap px-8 flex items-center gap-2">
                       {item}
                       <span className="text-[#FFD100] font-black mx-2">·</span>
@@ -249,7 +249,7 @@ export default function Hero() {
         <div className="bg-[#fffbea] border-y border-amber-100">
           <div className="max-w-[1280px] mx-auto px-5 sm:px-8 py-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
-              { icon: "🏪", title: "First Physical Store", desc: "Lahore's first dedicated cash & carry — a new standard for wholesale shopping in Pakistan." },
+              { icon: "🏪", title: "First Physical Store", desc: "Rawalpindi's first dedicated cash & carry — a new standard for wholesale shopping in Pakistan." },
               { icon: "💰", title: "Wholesale Prices", desc: "Direct from suppliers. No middlemen. You save more whether you buy one or one hundred." },
               { icon: "🤝", title: "Trusted Since Day One", desc: "A proud project of Ashraf & Sons Traders — built on decades of business integrity." },
             ].map((f, i) => (
