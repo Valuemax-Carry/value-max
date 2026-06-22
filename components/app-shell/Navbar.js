@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import CartDrawer from "./Cart";
 import Link from "next/link";
+import { Search, Menu as LucideMenu, X as LucideX, ShoppingCart } from 'lucide-react'
 
 const CART_ITEMS = [
   { id: 1, name: "Basmati Rice 5kg", price: 1250, qty: 2, img: "🌾" },
@@ -41,7 +42,7 @@ export default function Navbar() {
         <div className="hidden md:flex bg-[#E8001C] justify-center gap-8 py-1.5 text-[11.5px] text-white/90 tracking-wide">
           <span>📦 Bulk Orders Welcome</span>
           <span>🚚 Free Delivery on Orders above Rs. 5,000</span>
-          <span>☎️ 042-111-826-826</span>
+          <span>☎️ +966 55-617-9998</span>
         </div>
 
         <div className="max-w-[1280px] mx-auto px-5 h-[70px] flex items-center gap-5">
@@ -73,27 +74,22 @@ export default function Navbar() {
                 placeholder="Search products, brands, categories…"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                onFocus={() => setSearchFocused(true)}
+                onFocus={() => { setSearchFocused(true); setCartOpen(false); }}
                 onBlur={() => setSearchFocused(false)}
               />
               <button className="bg-[#E8001C] hover:bg-[#c0001a] border-none px-4 h-11 flex items-center justify-center shrink-0 transition-colors duration-200 cursor-pointer">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                </svg>
+                <Search size={18} color="white" />
               </button>
             </div>
           </div>
 
           <div className="flex items-center gap-1.5 ml-auto shrink-0">
             <button
-              onClick={() => setCartOpen(!cartOpen)}
+              onClick={() => { setCartOpen(!cartOpen); setMenuOpen(false); }}
               className="p-2 rounded-lg border-none bg-transparent text-gray-600 hover:bg-red-50 hover:text-[#E8001C] hover:scale-[1.08] transition-all duration-150 cursor-pointer relative flex items-center justify-center"
               aria-label="Cart"
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
-                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
-              </svg>
+              <ShoppingCart size={22} />
               {totalItems > 0 && (
                 <span className="absolute top-0.5 right-0.5 bg-[#E8001C] text-white text-[9px] font-bold min-w-[17px] h-[17px] rounded-full flex items-center justify-center border-2 border-white leading-none">
                   {totalItems}
@@ -106,18 +102,14 @@ export default function Navbar() {
             </button>
 
             <button
-              onClick={() => setMenuOpen(!menuOpen)}
+              onClick={() => { setMenuOpen(!menuOpen); setCartOpen(false); }}
               className="md:hidden flex items-center justify-center border border-gray-200 hover:border-[#E8001C] hover:text-[#E8001C] rounded-lg p-1.5 bg-transparent text-gray-700 cursor-pointer transition-colors duration-200"
               aria-label="Menu"
             >
               {menuOpen ? (
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                  <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-                </svg>
+                <LucideX size={20} />
               ) : (
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                  <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
-                </svg>
+                <LucideMenu size={20} />
               )}
             </button>
           </div>
@@ -153,13 +145,11 @@ export default function Navbar() {
                 placeholder="Search products…"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                onFocus={() => setSearchFocused(true)}
+                onFocus={() => { setSearchFocused(true); setCartOpen(false); }}
                 onBlur={() => setSearchFocused(false)}
               />
               <button className="bg-[#E8001C] hover:bg-[#c0001a] border-none px-4 h-10 flex items-center justify-center shrink-0 transition-colors duration-200 cursor-pointer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                </svg>
+                <Search size={16} color="white" />
               </button>
             </div>
 
@@ -167,7 +157,7 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 href={link.path}
-                onClick={() => setMenuOpen(false)}
+                onClick={() => { setMenuOpen(false); setCartOpen(false); }}
                 className={`relative no-underline text-sm font-medium px-3.5 py-2.5 rounded-lg w-full transition-colors duration-150
                   ${link.label === "Home" ? "text-[#E8001C] font-semibold bg-red-50" : "text-gray-700 hover:text-[#E8001C] hover:bg-red-50"}`}
               >
