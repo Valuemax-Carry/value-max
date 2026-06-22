@@ -1,7 +1,7 @@
 import Navbar from "@/components/app-shell/Navbar";
 import WhatsaapIcon from "@/components/app-shell/WhatsaapIcon";
+import Contact from "@/components/landing/Contact";
 import Hero from "@/components/landing/Hero";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
     <Navbar />
     <Hero />
     <WhatsaapIcon />
+    <Contact />
     </>
   );
 }

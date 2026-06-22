@@ -16,7 +16,7 @@ const NAV_LINKS = [
   { label: "Categories", path: "/categories" },
   { label: "Deals", path: "/deals" },
   { label: "Bulk Orders", path: "/bulk-orders" },
-  { label: "Contact", path: "/contact" },
+  { label: "Contact", path: "#contact" },
 ];
 
 export default function Navbar() {
