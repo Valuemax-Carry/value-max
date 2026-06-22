@@ -158,7 +158,8 @@ export default function Contact() {
         }
       `}</style>
 
-      <section ref={sectionRef} className="vm-contact relative bg-white overflow-hidden mt-20">
+      <section ref={sectionRef} className="vm-contact relative bg-white overflow-hidden mt-20"
+      id="contact">
         <div className="absolute top-0 left-0 w-[40%] h-full bg-[#fffbea] hidden lg:block" style={{clipPath: "polygon(0 0, 88% 0, 76% 100%, 0% 100%)"}} />
 
         <div className="absolute top-10 left-[6%] w-20 h-20 bg-[#FFD100] rounded-full opacity-15 vm-c-badge-float hidden lg:block" />
