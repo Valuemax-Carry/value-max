@@ -234,7 +234,7 @@ export default function Hero() {
             <div className="vm-ticker-track">
               {[...Array(2)].map((_, r) => (
                 <div key={r} className="flex items-center gap-0">
-                  {["📦 Wholesale Prices", "🛒 10,000+ Products", "🚚 Free Delivery above Rs. 2,000", "⭐ Pakistan's First Cash & Carry", "📍 Now Open in Lahore", "💛 Ashraf & Sons Traders", "📦 Bulk Orders Welcome", "🔥 New Deals Every Week"].map((item, i) => (
+                  {["📦 Wholesale Prices", "🛒 10,000+ Products", "🚚 Free Delivery above Rs. 2,000", "⭐ Pakistan's First Smartest Cash & Carry", "📍 Now Open in Lahore", "💛 Ashraf & Sons Traders", "📦 Bulk Orders Welcome", "🔥 New Deals Every Week"].map((item, i) => (
                     <span key={i} className="text-white text-[13px] font-semibold whitespace-nowrap px-8 flex items-center gap-2">
                       {item}
                       <span className="text-[#FFD100] font-black mx-2">·</span>
