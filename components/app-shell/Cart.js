@@ -31,7 +31,7 @@ export default function CartDrawer({ cartOpen, setCartOpen, cartItems, totalItem
           </button>
         </div>
 
-        <div className="flex-1 overflow-y-auto px-5 py-3">
+        <div className="flex-1 overflow-y-auto px-5 py-3 min-h-0">
           {cartItems.map((item) => (
             <div key={item.id} className="flex items-center gap-3 py-3 border-b border-gray-50">
               <div className="w-[46px] h-[46px] bg-amber-50 border border-amber-200 rounded-xl flex items-center justify-center text-[22px] shrink-0">
@@ -52,7 +52,7 @@ export default function CartDrawer({ cartOpen, setCartOpen, cartItems, totalItem
           ))}
         </div>
 
-        <div className="border-t-2 border-gray-100 px-5 py-4">
+        <div className="border-t-2 border-gray-100 px-5 py-4 shrink-0">
           <div className="flex justify-between items-center mb-3.5">
             <span className="text-[13px] text-gray-500">Total Amount</span>
             <span className="text-xl font-extrabold text-gray-900">
