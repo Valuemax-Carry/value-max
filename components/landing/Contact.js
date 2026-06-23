@@ -10,7 +10,7 @@ const CONTACT_CARDS = [
       </svg>
     ),
     label: "Call Us",
-    value: "+966556179998 | +051-4947279",
+    value: "+03085518210",
   },
   {
     icon: (
@@ -92,7 +92,7 @@ export default function Contact() {
         .vm-c-card:nth-child(3) { animation-delay: 0.8s; }
 
         .vm-c-shimmer {
-          background: linear-gradient(90deg, #E8001C 0%, #FFD100 40%, #E8001C 60%, #FFD100 100%);
+          background: linear-gradient(90deg, ##b60a01 0%, ##ffbc0b 40%, #b60a01 60%, #ffbc0b 100%);
           background-size: 200% auto;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -112,7 +112,7 @@ export default function Contact() {
           bottom: -4px;
           left: 0; right: 0;
           height: 5px;
-          background: #FFD100;
+          background: #ffbc0b;
           border-radius: 3px;
           transform-origin: left;
           animation: slideRight 0.6s cubic-bezier(0.22,1,0.36,1) 0.75s both;
@@ -150,24 +150,24 @@ export default function Contact() {
           transition: all 0.22s cubic-bezier(0.22,1,0.36,1);
         }
         .vm-c-icon-card:hover .vm-c-icon-wrap {
-          background: #E8001C;
+          background: #b60a01;
           color: #fff;
         }
       `}</style>
 
-      <section ref={sectionRef} className="vm-contact relative bg-white overflow-hidden mt-20"
+      <section ref={sectionRef} className="vm-contact relative bg-[#ffffff] overflow-hidden mt-20"
       id="contact">
-        <div className="absolute top-0 left-0 w-[40%] h-full bg-[#fffbea] hidden lg:block" style={{clipPath: "polygon(0 0, 88% 0, 76% 100%, 0% 100%)"}} />
+        <div className="absolute top-0 left-0 w-[40%] h-full bg-[#ffffff] hidden lg:block" style={{clipPath: "polygon(0 0, 88% 0, 76% 100%, 0% 100%)"}} />
 
-        <div className="absolute top-10 left-[6%] w-20 h-20 bg-[#FFD100] rounded-full opacity-15 vm-c-badge-float hidden lg:block" />
-        <div className="absolute bottom-16 left-[18%] w-10 h-10 bg-[#E8001C] rounded-full opacity-10 vm-c-badge-float hidden lg:block" style={{animationDelay: "1s"}} />
+        <div className="absolute top-10 left-[6%] w-20 h-20 bg-[#ffbc0b] rounded-full opacity-15 vm-c-badge-float hidden lg:block" />
+        <div className="absolute bottom-16 left-[18%] w-10 h-10 bg-[#b60a01] rounded-full opacity-10 vm-c-badge-float hidden lg:block" style={{animationDelay: "1s"}} />
 
         <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 py-16 sm:py-20 lg:py-28 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-12">
 
           <div className="relative z-10 max-w-[480px]">
             {visible && (
               <div className="vm-c-up-1 inline-flex items-center gap-2 bg-red-50 border border-red-100 text-[#E8001C] text-xs font-semibold px-3.5 py-1.5 rounded-full mb-6 uppercase tracking-widest">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#E8001C] animate-pulse inline-block" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#b60a01] animate-pulse inline-block" />
                 Let's Talk Business
               </div>
             )}
@@ -188,7 +188,7 @@ export default function Contact() {
 
             {visible && (
               <div className="vm-c-up-4 flex flex-wrap gap-3">
-                <button className="vm-c-cta bg-[#E8001C] hover:bg-[#c0001a] text-white font-bold text-sm px-7 py-3.5 rounded-xl border-none cursor-pointer">
+                <button className="vm-c-cta bg-[#b60a01] hover:bg-[#c0001a] text-white font-bold text-sm px-7 py-3.5 rounded-xl border-none cursor-pointer">
                   Shop the Store →
                 </button>
                 <button className="vm-c-outline border-2 border-gray-200 text-gray-800 font-semibold text-sm px-7 py-3.5 rounded-xl bg-transparent cursor-pointer">

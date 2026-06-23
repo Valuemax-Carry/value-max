@@ -212,7 +212,7 @@ export default function Hero() {
                 </div>
                 <video
                   className="absolute inset-0 w-full h-full object-cover opacity-0 [&:not([src=''])]:opacity-100 transition-opacity duration-500"
-                  src="/herovideo.mp4"
+                  src="/videos/herovideo.mp4"
                   autoPlay
                   muted
                   loop
@@ -287,7 +287,7 @@ export default function Hero() {
               </div>
               <video
                 className="relative z-10 w-full h-full object-cover"
-                src="/herovideo.mp4"
+                src="/videos/herovideo.mp4"
                 autoPlay
                 muted
                 loop

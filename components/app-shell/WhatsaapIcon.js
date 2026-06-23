@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const WHATSAPP_NUMBER = "+966556179998";
+const WHATSAPP_NUMBER = "+03085518210";
 const WHATSAPP_MESSAGE = "Hello! I'm interested in shopping at ValueMax Cash & Carry.";
 
 export default function WhatsappIcon() {
