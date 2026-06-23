@@ -3,10 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 const CATEGORIES = [
   { id: 1, slug: "personal-care-hair", title: "Personal Care & Hair", image: "/ProdcutsBanner/1.png" },
@@ -89,51 +88,35 @@ export default function Categories() {
 
         .swiper-button-next,
         .swiper-button-prev {
-          width: 46px;
-          height: 46px;
+          width: 36px;
+          height: 36px;
           background: #b60a01;
           border: 2px solid #FFD100;
-          border-radius: 12px;
+          border-radius: 10px;
           color: #FFD100;
-          transition: all 0.3s cubic-bezier(0.22,1,0.36,1);
-          box-shadow: 0 4px 15px rgba(182, 10, 1, 0.25);
+          transition: all 0.2s ease;
+          box-shadow: 0 4px 12px rgba(182, 10, 1, 0.18);
           z-index: 10;
-          top: calc(50% - 30px);
+          top: calc(50% - 18px);
         }
 
         .swiper-button-next:hover,
         .swiper-button-prev:hover {
           background: #c0001a;
-          transform: translateY(-3px);
-          box-shadow: 0 8px 25px rgba(182, 10, 1, 0.4);
+          transform: translateY(-2px);
+          box-shadow: 0 8px 20px rgba(182, 10, 1, 0.28);
         }
 
         .swiper-button-next::after,
         .swiper-button-prev::after {
-          font-size: 18px;
+          font-size: 14px;
           font-weight: 800;
         }
 
-        .swiper-button-next { right: 0px; }
-        .swiper-button-prev { left: 0px; right: auto; }
+        .swiper-button-next { right: 8px; }
+        .swiper-button-prev { left: 8px; right: auto; }
 
-        .swiper-pagination-bullet {
-          background: #E8001C;
-          opacity: 0.35;
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          transition: all 0.3s ease;
-        }
-
-        .swiper-pagination-bullet-active {
-          background: #FFD100;
-          opacity: 1;
-          width: 28px;
-          border-radius: 5px;
-        }
-
-        .swiper-pagination { bottom: 10px !important; }
+        .swiper-pagination { display: none !important; }
 
         .category-card {
           height: 380px;
@@ -226,6 +209,8 @@ export default function Categories() {
           .swiper-button-prev {
             width: 38px;
             height: 38px;
+            right: 8px;
+            left: auto;
           }
 
           .swiper-button-next::after,
@@ -234,6 +219,9 @@ export default function Categories() {
           }
 
           .category-card { height: 300px; }
+
+          .category-card-inner { width: 100%; }
+          .category-image { width: 100%; height: 100%; }
         }
       `}</style>
 
@@ -258,7 +246,7 @@ export default function Categories() {
           <div className={`${visible ? "vm-fade-in-5" : "opacity-0"} relative px-10`}>
             <Swiper
               ref={swiperRef}
-              modules={[Navigation, Pagination, Autoplay]}
+              modules={[Navigation, Autoplay]}
               spaceBetween={22}
               slidesPerView={1}
               breakpoints={{
@@ -268,10 +256,6 @@ export default function Categories() {
               navigation={{
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
-              }}
-              pagination={{
-                el: ".swiper-pagination",
-                clickable: true,
               }}
               autoplay={{
                 delay: 5000,
@@ -307,7 +291,6 @@ export default function Categories() {
 
               <div className="swiper-button-prev" />
               <div className="swiper-button-next" />
-              <div className="swiper-pagination" />
             </Swiper>
           </div>
         </div>
