@@ -220,9 +220,10 @@ export default function Hero() {
                   className="absolute inset-0 w-full h-full"
                 >
                   {[
-                    "/ProdcutsImages/Flour/1.jpg",
-                    "/banner/category-banner.jpg",
-                    "/banner/category-banner.jpg",
+                    "/HeroSwiper/1.jpg",
+                    "/HeroSwiper/2.jpg",
+                    "/HeroSwiper/3.jpg",
+                    "/HeroSwiper/4.jpg"
                   ].map((src, i) => (
                     <SwiperSlide key={i}>
                       <img src={src} alt={`hero-${i}`} className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" />
