@@ -43,12 +43,10 @@ export default function Categories() {
           from { opacity: 0; transform: translateY(32px); }
           to { opacity: 1; transform: translateY(0); }
         }
-
         @keyframes fadeIn {
           from { opacity: 0; }
           to { opacity: 1; }
         }
-
         @keyframes slideRight {
           from { transform: scaleX(0); }
           to { transform: scaleX(1); }
@@ -62,17 +60,12 @@ export default function Categories() {
         .vm-fade-up-3 { animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.4s both; }
         .vm-fade-in-5 { animation: fadeIn 1s ease 0.7s both; }
 
-        .vm-underline-anim {
-          display: inline-block;
-          position: relative;
-        }
-
+        .vm-underline-anim { display: inline-block; position: relative; }
         .vm-underline-anim::after {
           content: '';
           position: absolute;
           bottom: -4px;
-          left: 0;
-          right: 0;
+          left: 0; right: 0;
           height: 5px;
           background: #FFD100;
           border-radius: 3px;
@@ -80,66 +73,63 @@ export default function Categories() {
           animation: slideRight 0.6s cubic-bezier(0.22,1,0.36,1) 0.8s both;
         }
 
-        .categories-swiper {
-          padding-bottom: 60px !important;
-          padding-left: 4px !important;
-          padding-right: 4px !important;
-        }
-
-        .swiper-button-next,
-        .swiper-button-prev {
-          width: 36px;
-          height: 36px;
-          background: #b60a01;
-          border: 2px solid #FFD100;
-          border-radius: 10px;
-          color: #FFD100;
-          transition: all 0.2s ease;
-          box-shadow: 0 4px 12px rgba(182, 10, 1, 0.18);
-          z-index: 10;
-          top: calc(50% - 18px);
-        }
-
-        .swiper-button-next:hover,
-        .swiper-button-prev:hover {
-          background: #c0001a;
-          transform: translateY(-2px);
-          box-shadow: 0 8px 20px rgba(182, 10, 1, 0.28);
-        }
-
-        .swiper-button-next::after,
-        .swiper-button-prev::after {
-          font-size: 14px;
-          font-weight: 800;
-        }
-
-        .swiper-button-next { right: 8px; }
-        .swiper-button-prev { left: 8px; right: auto; }
-
+        .categories-swiper { padding: 8px 4px 8px !important; }
         .swiper-pagination { display: none !important; }
 
-        .category-card {
-          height: 380px;
+        .cat-nav-btn {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 20;
+          width: 44px;
+          height: 44px;
+          border-radius: 10px;
+          background: #b60a01;
+          border: 2px solid #FFD100;
+          color: #FFD100;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           cursor: pointer;
+          box-shadow: 0 4px 16px rgba(182,10,1,0.25);
+          transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+          font-size: 18px;
+          font-weight: 900;
+          user-select: none;
         }
+        .cat-nav-btn:hover {
+          background: #c0001a;
+          box-shadow: 0 8px 24px rgba(182,10,1,0.35);
+          transform: translateY(-52%);
+        }
+        .cat-nav-btn:active { transform: translateY(-48%); }
+        .cat-nav-prev { left: -22px; }
+        .cat-nav-next { right: -22px; }
 
         .category-card-inner {
           position: relative;
           width: 100%;
-          height: 100%;
-          border-radius: 16px;
+          border-radius: 18px;
           overflow: hidden;
           border: 2px solid transparent;
           transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s cubic-bezier(0.22,1,0.36,1);
+          aspect-ratio: 3/4;
+          display: block;
         }
-
-        .category-card:hover .category-card-inner {
+        .category-card-inner:hover {
           border-color: #E8001C;
-          box-shadow: 0 12px 36px rgba(232, 0, 28, 0.22);
-          transform: translateY(-4px);
+          box-shadow: 0 16px 40px rgba(232,0,28,0.22);
+          transform: translateY(-5px);
+        }
+        .category-card-inner:hover .category-image { transform: scale(1.07); }
+        .category-card-inner:hover .category-btn {
+          opacity: 1;
+          transform: translateY(0);
         }
 
         .category-image {
+          position: absolute;
+          inset: 0;
           width: 100%;
           height: 100%;
           object-fit: cover;
@@ -148,150 +138,112 @@ export default function Categories() {
           transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
         }
 
-        .category-card:hover .category-image {
-          transform: scale(1.07);
-        }
-
-        .category-overlay {
+        .category-label {
           position: absolute;
-          inset: 0;
-          background: linear-gradient(
-            to top,
-            rgba(0,0,0,0.68) 0%,
-            rgba(0,0,0,0.18) 50%,
-            rgba(0,0,0,0) 100%
-          );
-          opacity: 0;
-          transition: opacity 0.35s ease;
-          display: flex;
-          align-items: flex-end;
-          justify-content: center;
-          padding-bottom: 28px;
-          z-index: 2;
-        }
-
-        .category-card:hover .category-overlay {
-          opacity: 1;
+          bottom: 0; left: 0; right: 0;
+          z-index: 3;
+          background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+          padding: 40px 16px 18px;
         }
 
         .category-btn {
+          display: inline-block;
           background: #E8001C;
           color: #fff;
           font-weight: 700;
-          font-size: 12px;
-          padding: 9px 22px;
-          border-radius: 8px;
+          font-size: 11px;
+          padding: 7px 16px;
+          border-radius: 7px;
           text-transform: uppercase;
           letter-spacing: 0.08em;
-          cursor: pointer;
-          border: 2px solid #FFD100;
-          transform: translateY(12px);
+          border: 1.5px solid #FFD100;
           opacity: 0;
-          transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease, background 0.25s ease, box-shadow 0.25s ease;
-          box-shadow: 0 4px 16px rgba(232,0,28,0.3);
+          transform: translateY(10px);
+          transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease, background 0.2s ease;
+          box-shadow: 0 4px 14px rgba(232,0,28,0.3);
           white-space: nowrap;
+          margin-top: 8px;
         }
-
-        .category-card:hover .category-btn {
-          opacity: 1;
-          transform: translateY(0);
-        }
-
         .category-btn:hover {
           background: #FFD100;
           color: #b60a01;
-          border-color: #FFD100;
-          box-shadow: 0 6px 22px rgba(255,209,0,0.35);
         }
 
-        @media (max-width: 1024px) {
-          .swiper-button-next,
-          .swiper-button-prev {
-            width: 38px;
-            height: 38px;
-            right: 8px;
-            left: auto;
-          }
-
-          .swiper-button-next::after,
-          .swiper-button-prev::after {
-            font-size: 15px;
-          }
-
-          .category-card { height: 300px; }
-
-          .category-card-inner { width: 100%; }
-          .category-image { width: 100%; height: 100%; }
+        @media (max-width: 640px) {
+          .cat-nav-prev { left: -14px; }
+          .cat-nav-next { right: -14px; }
+          .cat-nav-btn { width: 36px; height: 36px; font-size: 15px; border-radius: 8px; }
         }
       `}</style>
 
       <section className="vm-hero bg-white py-20 sm:py-28 overflow-hidden">
         <div className="max-w-[1280px] mx-auto px-8 sm:px-12">
+
           <div className="text-center mb-12 sm:mb-16">
             <div className={`${visible ? "vm-fade-up-1" : "opacity-0"} inline-flex items-center gap-2 bg-red-50 border border-red-100 text-[#E8001C] text-xs font-semibold px-3.5 py-1.5 rounded-full mb-6 uppercase tracking-widest`}>
               <span className="w-1.5 h-1.5 rounded-full bg-[#b60a01] animate-pulse inline-block" />
               Explore Gallery
             </div>
-
             <h2 className={`${visible ? "vm-fade-up-2" : "opacity-0"} vm-display text-[2.2rem] sm:text-[2.8rem] lg:text-[3.2rem] leading-[1.12] font-extrabold text-gray-900 mb-3`}>
               Shop by
               <span className="vm-underline-anim ml-2 text-[#E8001C]">Category</span>
             </h2>
-
             <p className={`${visible ? "vm-fade-up-3" : "opacity-0"} text-gray-500 text-base sm:text-lg max-w-[600px] mx-auto`}>
               Browse our curated selection of premium products and categories
             </p>
           </div>
 
-          <div className={`${visible ? "vm-fade-in-5" : "opacity-0"} relative px-10`}>
+          <div className={`${visible ? "vm-fade-in-5" : "opacity-0"} relative px-8`}>
+
+            <button className="cat-nav-btn cat-nav-prev swiper-cat-prev" aria-label="Previous">
+              ‹
+            </button>
+            <button className="cat-nav-btn cat-nav-next swiper-cat-next" aria-label="Next">
+              ›
+            </button>
+
             <Swiper
               ref={swiperRef}
               modules={[Navigation, Autoplay]}
-              spaceBetween={22}
+              spaceBetween={18}
               slidesPerView={1}
               breakpoints={{
-                640: { slidesPerView: 2, spaceBetween: 18 },
-                1024: { slidesPerView: 4, spaceBetween: 22 },
+                480: { slidesPerView: 2, spaceBetween: 16 },
+                768: { slidesPerView: 3, spaceBetween: 18 },
+                1024: { slidesPerView: 4, spaceBetween: 20 },
+                1280: { slidesPerView: 5, spaceBetween: 20 },
               }}
               navigation={{
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                prevEl: ".swiper-cat-prev",
+                nextEl: ".swiper-cat-next",
               }}
-              autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
-              }}
+              autoplay={{ delay: 3500, disableOnInteraction: false }}
+              loop={true}
               className="categories-swiper"
             >
               {CATEGORIES.map((category) => (
-                <SwiperSlide key={category.id}>
-                  <div className="category-card">
+                <SwiperSlide key={category.id} className="w-full">
+                  <Link href={`/products/${category.slug}`} className="block w-full">
                     <div className="category-card-inner">
                       <img
                         src={category.image}
                         alt={category.title || `Category ${category.id}`}
                         className="category-image"
                       />
-                      <div className="category-overlay">
-                        <div className="text-center px-4">
-                          <div className="text-white font-bold text-lg leading-tight mb-2 category-title">
-                            {category.title}
-                          </div>
-                          <Link href={`/products/${category.slug}`} className="inline-block">
-                            <button className="category-btn" aria-label={`Explore ${category.title}`}>
-                              Explore →
-                            </button>
-                          </Link>
-                        </div>
+                      <div className="category-label">
+                        <p className="text-white font-bold text-[14px] leading-snug drop-shadow-md">
+                          {category.title}
+                        </p>
+                        <span className="category-btn">
+                          Explore →
+                        </span>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 </SwiperSlide>
               ))}
-
-              <div className="swiper-button-prev" />
-              <div className="swiper-button-next" />
             </Swiper>
+
           </div>
         </div>
       </section>
