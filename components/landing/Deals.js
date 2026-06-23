@@ -321,7 +321,7 @@ export default function Deals() {
                 Member Rewards
               </div>
               <h2 className="vm-display text-[1.9rem] sm:text-[2.4rem] font-extrabold text-gray-900 mb-3">
-                The Cash & Carry <span className="text-[#b60a01]">Loyalty Card</span>
+                The ValueMax <span className="text-[#b60a01]">Loyalty Card</span>
               </h2>
               <p className="text-gray-500 text-base max-w-[540px] mx-auto leading-relaxed">
                 Shop more, earn more. Your loyalty card unlocks exclusive benefits every single visit.
