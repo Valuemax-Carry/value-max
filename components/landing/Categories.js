@@ -9,21 +9,21 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const CATEGORIES = [
-  { id: 1, slug: "personal-care", title: "Personal Care & Hygiene", image: "/ProdcutsBanner/1.png" },
-  { id: 2, slug: "cooking-oils", title: "Cooking Oils & Ghee", image: "/ProdcutsBanner/2.png" },
-  { id: 3, slug: "staples", title: "Staples & Grains", image: "/ProdcutsBanner/3.png" },
-  { id: 4, slug: "beverages", title: "Beverages & Drinks", image: "/ProdcutsBanner/4.png" },
-  { id: 5, slug: "snacks", title: "Snacks & Confectionery", image: "/ProdcutsBanner/5.png" },
-  { id: 6, slug: "household", title: "Household Cleaners", image: "/ProdcutsBanner/6.png" },
-  { id: 7, slug: "dairy", title: "Dairy & Refrigerated", image: "/ProdcutsBanner/7.png" },
-  { id: 8, slug: "bakery", title: "Bakery & Bread", image: "/ProdcutsBanner/8.png" },
-  { id: 9, slug: "frozen-foods", title: "Frozen Foods", image: "/ProdcutsBanner/9.png" },
-  { id: 10, slug: "beverages-hot", title: "Tea, Coffee & Hot Drinks", image: "/ProdcutsBanner/10.png" },
-  { id: 11, slug: "baby-care", title: "Baby Care", image: "/ProdcutsBanner/11.png" },
-  { id: 12, slug: "pets", title: "Pet Supplies", image: "/ProdcutsBanner/12.png" },
-  { id: 13, slug: "personal-hair", title: "Hair Care & Styling", image: "/ProdcutsBanner/13.png" },
-  { id: 14, slug: "health", title: "Health & Supplements", image: "/ProdcutsBanner/14.png" },
-  { id: 15, slug: "bulk-orders", title: "Bulk Orders & Business", image: "/ProdcutsBanner/15.png" },
+  { id: 1, slug: "personal-care-hair", title: "Personal Care & Hair", image: "/ProdcutsBanner/1.png" },
+  { id: 2, slug: "personal-care-skin", title: "Personal Care & Skin", image: "/ProdcutsBanner/2.png" },
+  { id: 3, slug: "personal-care-oral", title: "Personal Care & Oral", image: "/ProdcutsBanner/3.png" },
+  { id: 4, slug: "baby-care", title: "Baby Care", image: "/ProdcutsBanner/4.png" },
+  { id: 5, slug: "drinks-beverages", title: "Drinks & Beverages", image: "/ProdcutsBanner/5.png" },
+  { id: 6, slug: "snacks", title: "Snacks", image: "/ProdcutsBanner/6.png" },
+  { id: 7, slug: "tea-coffee", title: "Tea & Coffee", image: "/ProdcutsBanner/7.png" },
+  { id: 8, slug: "dairy", title: "Dairy Products", image: "/ProdcutsBanner/8.png" },
+  { id: 9, slug: "pluses", title: "Pluses", image: "/ProdcutsBanner/9.png" },
+  { id: 10, slug: "Rice", title: "Rice", image: "/ProdcutsBanner/10.png" },
+  { id: 11, slug: "oil-ghee", title: "Oil & Ghee", image: "/ProdcutsBanner/11.png" },
+  { id: 12, slug: "flour", title: "Flour", image: "/ProdcutsBanner/12.png" },
+  { id: 13, slug: "sugar", title: "Sugar", image: "/ProdcutsBanner/13.png" },
+  { id: 14, slug: "detergents", title: "Detergents", image: "/ProdcutsBanner/14.png" },
+  { id: 15, slug: "cosmatics", title: "Cosmatics", image: "/ProdcutsBanner/15.png" },
 ];
 
 export default function Categories() {
