@@ -139,6 +139,26 @@ export default function Hero() {
           color: #fff;
           border-color: #1a1a1a;
         }
+
+        .vm-swiper-box {
+          height: 180px;
+        }
+        @media (min-width: 420px) {
+          .vm-swiper-box {
+            height: 240px;
+          }
+        }
+        @media (min-width: 640px) {
+          .vm-swiper-box {
+            height: 300px;
+          }
+        }
+        @media (min-width: 1024px) {
+          .vm-swiper-box {
+            height: auto;
+            aspect-ratio: 4/3;
+          }
+        }
       `}</style>
 
       <section ref={heroRef} className="vm-hero bg-white overflow-hidden">
@@ -154,32 +174,32 @@ export default function Hero() {
             <div className="absolute bottom-20 right-[6%] w-14 h-14 bg-white rounded-full opacity-15 vm-badge-float" style={{animationDelay:"1.5s"}} />
           </div>
 
-          <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 py-16 sm:py-20 lg:py-28 grid lg:grid-cols-2 gap-10 items-center">
+          <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 py-10 sm:py-20 lg:py-28 flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-10 lg:items-center">
 
             <div className="relative z-10">
-              <div className="vm-fade-up-1 inline-flex items-center gap-2 bg-red-50 border border-red-100 text-[#E8001C] text-xs font-semibold px-3.5 py-1.5 rounded-full mb-6 uppercase tracking-widest">
+              <div className="vm-fade-up-1 inline-flex items-center gap-2 bg-red-50 border border-red-100 text-[#E8001C] text-xs font-semibold px-3.5 py-1.5 rounded-full mb-5 uppercase tracking-widest">
                 <span className="w-1.5 h-1.5 rounded-full bg-[##b60a01] animate-pulse inline-block" />
                 Now Open — Rawalpindi's First
               </div>
 
-              <h1 className="vm-display text-[2.6rem] sm:text-[3.2rem] lg:text-[3.8rem] leading-[1.08] font-extrabold text-gray-900 mb-2 vm-fade-up-2">
+              <h1 className="vm-display text-[2rem] xs:text-[2.2rem] sm:text-[3.2rem] lg:text-[3.8rem] leading-[1.08] font-extrabold text-gray-900 mb-2 vm-fade-up-2">
                 Pakistan's{" "}
                 <span className="vm-underline-anim text-[#E8001C]">Smartest</span>
               </h1>
-              <h1 className="vm-display text-[2.6rem] sm:text-[3.2rem] lg:text-[3.8rem] leading-[1.08] font-extrabold text-gray-900 mb-5 vm-fade-up-2">
+              <h1 className="vm-display text-[2rem] xs:text-[2.2rem] sm:text-[3.2rem] lg:text-[3.8rem] leading-[1.08] font-extrabold text-gray-900 mb-4 vm-fade-up-2">
                 Cash &amp; Carry Store
               </h1>
 
-              <p className="text-gray-500 text-base sm:text-lg leading-relaxed max-w-[480px] mb-3 vm-fade-up-3">
+              <p className="text-gray-500 text-sm sm:text-lg leading-relaxed max-w-[480px] mb-3 vm-fade-up-3">
                 Wholesale prices. Retail convenience. Everything your home or business needs — under one roof.
               </p>
 
-              <p className="text-[13px] text-gray-400 font-medium tracking-wide mb-8 vm-fade-up-3">
+              <p className="text-[13px] text-gray-400 font-medium tracking-wide mb-6 vm-fade-up-3">
                 A project of{" "}
                 <span className="text-gray-700 font-semibold">Ashraf &amp; Sons Traders</span>
               </p>
 
-              <div className="flex flex-wrap gap-3 mb-10 vm-fade-up-4">
+              <div className="flex flex-wrap gap-3 mb-8 vm-fade-up-4">
                 <button className="vm-cta-primary vm-btn-hover bg-[#b60a01] hover:bg-[#c0001a] text-white font-bold text-sm px-7 py-3.5 rounded-xl border-none cursor-pointer">
                   Shop Now →
                 </button>
@@ -204,7 +224,7 @@ export default function Hero() {
                 <div className="uppercase tracking-wider">In Pakistan</div>
               </div>
 
-              <div className="w-full max-w-[460px] h-[220px] sm:h-[280px] lg:h-auto lg:aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden shadow-2xl border-4 border-white relative">
+              <div className="vm-swiper-box w-full max-w-[460px] bg-gray-100 rounded-2xl overflow-hidden shadow-2xl border-4 border-white relative">
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-gray-300">
                   <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="2" width="20" height="20" rx="4"/>
