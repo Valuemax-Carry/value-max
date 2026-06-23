@@ -1,6 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
 const STATS = [
   { value: "10,000+", label: "Products" },
@@ -210,15 +213,22 @@ export default function Hero() {
                   <p className="text-sm font-medium text-gray-400">Store Tour Video</p>
                   <p className="text-xs text-gray-300">Place your <code className="bg-gray-200 px-1 rounded text-gray-500">video.mp4</code> in <code className="bg-gray-200 px-1 rounded text-gray-500">/public</code></p>
                 </div>
-                <video
-                  className="absolute inset-0 w-full h-full object-cover opacity-0 [&:not([src=''])]:opacity-100 transition-opacity duration-500"
-                  src="/videos/herovideo.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  onLoadedData={(e) => e.target.classList.remove("opacity-0")}
-                />
+                <Swiper
+                  modules={[Autoplay]}
+                  loop={true}
+                  autoplay={{ delay: 3500, disableOnInteraction: false }}
+                  className="absolute inset-0 w-full h-full"
+                >
+                  {[
+                    "/ProdcutsImages/Flour/1.jpg",
+                    "/banner/category-banner.jpg",
+                    "/banner/category-banner.jpg",
+                  ].map((src, i) => (
+                    <SwiperSlide key={i}>
+                      <img src={src} alt={`hero-${i}`} className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
               </div>
 
               <div className="flex items-center gap-2 mt-4 bg-white border border-gray-100 rounded-full px-4 py-2 shadow-sm">
