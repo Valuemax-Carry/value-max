@@ -67,6 +67,10 @@ export const metadata = {
     },
   },
   category: "Shopping & Retail",
+
+  icons:{
+    icon:"/favicon.png"
+  }
 };
 
 export default function RootLayout({ children }) {
