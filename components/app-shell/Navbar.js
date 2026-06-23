@@ -37,9 +37,9 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`sticky top-0 z-[1000] bg-white border-b-[3px] border-[#E8001C] font-[Poppins] transition-shadow duration-300 ${scrolled ? "shadow-[0_4px_24px_rgba(232,0,28,0.13)]" : ""}`}>
+      <nav className={`sticky top-0 z-[1000] bg-white border-b-[3px] border-[#b60a01] font-[Poppins] transition-shadow duration-300 ${scrolled ? "shadow-[0_4px_24px_rgba(232,0,28,0.13)]" : ""}`}>
 
-        <div className="hidden md:flex bg-[#E8001C] justify-center gap-8 py-1.5 text-[11.5px] text-white/90 tracking-wide">
+        <div className="hidden md:flex bg-[#b60a01] justify-center gap-8 py-1.5 text-[11.5px] text-white/90 tracking-wide">
           <span>📦 Bulk Orders Welcome</span>
           <span>🚚 Free Delivery on Orders above Rs.2,000</span>
           <span>☎️ +966 55-617-9998</span>
@@ -48,17 +48,17 @@ export default function Navbar() {
         <div className="max-w-[1280px] mx-auto px-5 h-[70px] flex items-center gap-5">
 
           <Link href="/" className="flex items-center gap-2.5 no-underline shrink-0 hover:scale-[1.03] transition-transform duration-200">
-            <div className="w-11 h-11 bg-[#E8001C] rounded-[10px] flex items-center justify-center relative overflow-hidden shrink-0">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFD100" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="9" cy="21" r="1" fill="#FFD100" stroke="#FFD100"/>
-                <circle cx="20" cy="21" r="1" fill="#FFD100" stroke="#FFD100"/>
+            <div className="w-11 h-11 bg-[#b60a01] rounded-[10px] flex items-center justify-center relative overflow-hidden shrink-0">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffbc0b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="9" cy="21" r="1" fill="##ffbc0b" stroke="##ffbc0b"/>
+                <circle cx="20" cy="21" r="1" fill="##ffbc0b" stroke="##ffbc0b"/>
                 <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
               </svg>
-              <div className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-[#FFD100] rounded-tl-[3px] opacity-25" />
+              <div className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-[##ffbc0b] rounded-tl-[3px] opacity-25" />
             </div>
             <div className="leading-tight">
               <div className="text-[19px] font-extrabold text-gray-900 tracking-tight">
-                Value<span className="text-[#E8001C]">-Max</span>
+                Value<span className="text-[#E8001C]">Max</span>
               </div>
               <div className="hidden md:block text-[9.5px] font-medium text-gray-400 uppercase tracking-[1.2px]">
                 Cash &amp; Carry
@@ -77,21 +77,20 @@ export default function Navbar() {
                 onFocus={() => { setSearchFocused(true); setCartOpen(false); }}
                 onBlur={() => setSearchFocused(false)}
               />
-              <button className="bg-[#E8001C] hover:bg-[#c0001a] border-none px-4 h-11 flex items-center justify-center shrink-0 transition-colors duration-200 cursor-pointer">
+              <button className="bg-[#b60a01] hover:bg-[#c0001a] border-none px-4 h-11 flex items-center justify-center shrink-0 transition-colors duration-200 cursor-pointer">
                 <Search size={18} color="white" />
               </button>
             </div>
           </div>
 
           <div className="flex items-center gap-1.5 ml-auto shrink-0">
-
-            <button className="hidden md:block border-2 border-[#E8001C] text-[#E8001C] hover:bg-[#E8001C] hover:text-white hover:-translate-y-px bg-transparent text-[13px] font-semibold px-4 py-[7px] rounded-lg cursor-pointer transition-all duration-200 whitespace-nowrap">
+            <button className="hidden md:block border-2 border-[##b60a01] text-[#E8001C] hover:bg-[#E8001C] hover:text-white hover:-translate-y-px bg-transparent text-[13px] font-semibold px-4 py-[7px] rounded-lg cursor-pointer transition-all duration-200 whitespace-nowrap">
               Sign In
             </button>
 
             <button
               onClick={() => { setMenuOpen(!menuOpen); setCartOpen(false); }}
-              className="md:hidden flex items-center justify-center border border-gray-200 hover:border-[#E8001C] hover:text-[#E8001C] rounded-lg p-1.5 bg-transparent text-gray-700 cursor-pointer transition-colors duration-200"
+              className="md:hidden flex items-center justify-center border border-gray-200 hover:border-[##b60a01] hover:text-[#E8001C] rounded-lg p-1.5 bg-transparent text-gray-700 cursor-pointer transition-colors duration-200"
               aria-label="Menu"
             >
               {menuOpen ? (
@@ -136,7 +135,7 @@ export default function Navbar() {
                 onFocus={() => { setSearchFocused(true); setCartOpen(false); }}
                 onBlur={() => setSearchFocused(false)}
               />
-              <button className="bg-[#E8001C] hover:bg-[#c0001a] border-none px-4 h-10 flex items-center justify-center shrink-0 transition-colors duration-200 cursor-pointer">
+              <button className="bg-[##b60a01] hover:bg-[#c0001a] border-none px-4 h-10 flex items-center justify-center shrink-0 transition-colors duration-200 cursor-pointer">
                 <Search size={16} color="white" />
               </button>
             </div>
@@ -151,20 +150,19 @@ export default function Navbar() {
               >
                 {link.label}
                 {link.label === "Deals" && (
-                  <span className="inline-flex items-center bg-[#FFD100] text-[#7a5800] text-[9px] font-bold px-1.5 py-px rounded ml-1.5 tracking-wide align-middle">
+                  <span className="inline-flex items-center bg-[##ffbc0b] text-[#7a5800] text-[9px] font-bold px-1.5 py-px rounded ml-1.5 tracking-wide align-middle">
                     HOT
                   </span>
                 )}
               </Link>
             ))}
 
-            <button className="mt-2 border-2 border-[#E8001C] text-[#E8001C] hover:bg-[#E8001C] hover:text-white bg-transparent text-sm font-semibold px-4 py-2 rounded-lg cursor-pointer transition-all duration-200">
+            <button className="mt-2 border-2 border-[##b60a01] text-[#E8001C] hover:bg-[#E8001C] hover:text-white bg-transparent text-sm font-semibold px-4 py-2 rounded-lg cursor-pointer transition-all duration-200">
               Sign In
             </button>
           </div>
         </div>
       </nav>
-
     </>
   );
 }
