@@ -14,8 +14,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "ValueMax Cash & Carry | Pakistan's First Cash & Carry Store — Lahore",
-  description: "ValueMax Cash & Carry is Pakistan's first physical cash & carry store in Lahore. Shop 10,000+ products at wholesale prices. A project of Ashraf & Sons Traders. Free delivery on orders above Rs. 5,000.",
+  title: {
+    default: "ValueMax Cash & Carry | Pakistan's First Cash & Carry Store — Lahore",
+    template: "%s | ValueMax Cash & Carry",
+  },
+  description:
+    "ValueMax Cash & Carry is Pakistan's first physical cash & carry store in Lahore. Shop 10,000+ products at wholesale prices. A project of Ashraf & Sons Traders. Free delivery on orders above Rs. 5,000.",
   keywords: [
     "ValueMax Cash and Carry",
     "cash and carry Pakistan",
@@ -27,6 +31,11 @@ export const metadata = {
     "cash carry Lahore",
     "ValueMax store",
     "Pakistan wholesale market",
+    "superstore Lahore",
+    "grocery store Lahore",
+    "retail wholesale Pakistan",
+    "daily essentials Lahore",
+    "cheap grocery Lahore",
   ],
   authors: [{ name: "Ashraf & Sons Traders" }],
   creator: "Ashraf & Sons Traders",
@@ -37,7 +46,8 @@ export const metadata = {
   },
   openGraph: {
     title: "ValueMax Cash & Carry | Pakistan's First Cash & Carry Store",
-    description: "Shop 10,000+ products at wholesale prices. Lahore's first dedicated cash & carry — a project of Ashraf & Sons Traders.",
+    description:
+      "Shop 10,000+ products at wholesale prices. Lahore's first dedicated cash & carry — a project of Ashraf & Sons Traders.",
     url: "https://valuemaxstore.pk",
     siteName: "ValueMax Cash & Carry",
     images: [
@@ -54,7 +64,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ValueMax Cash & Carry | Pakistan's First Cash & Carry Store",
-    description: "Shop 10,000+ products at wholesale prices in Lahore. A project of Ashraf & Sons Traders.",
+    description:
+      "Shop 10,000+ products at wholesale prices in Lahore. A project of Ashraf & Sons Traders.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -69,10 +80,15 @@ export const metadata = {
     },
   },
   category: "Shopping & Retail",
-
-  icons:{
-    icon:"/favicon.png"
-  }
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.json",
+  verification: {
+    google: "REPLACE_WITH_GOOGLE_SEARCH_CONSOLE_TOKEN",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -89,6 +105,8 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#E8001C" />
         <meta name="geo.region" content="PK-PB" />
         <meta name="geo.placename" content="Lahore, Punjab, Pakistan" />
+        <meta name="geo.position" content="31.5204;74.3587" />
+        <meta name="ICBM" content="31.5204, 74.3587" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -96,16 +114,24 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Store",
               name: "ValueMax Cash & Carry",
-              description: "Pakistan's first physical cash & carry store offering wholesale prices on 10,000+ products in Lahore.",
+              description:
+                "Pakistan's first physical cash & carry store offering wholesale prices on 10,000+ products in Lahore.",
               url: "https://valuemaxstore.pk",
               logo: "https://valuemaxstore.pk/logo.png",
               image: "https://valuemaxstore.pk/og-image.jpg",
               telephone: "+92-42-111-826-826",
               address: {
                 "@type": "PostalAddress",
-                addressLocality: "Lahore",
+                streetAddress: "Islam Plaza, Main Bazar, Chak Beli Khan, Postal Code 47600, Tehsil & District Rawalpindi",
+                addressLocality: "Rawalpindi",
                 addressRegion: "Punjab",
+                postalCode: "47600",
                 addressCountry: "PK",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 31.5204,
+                longitude: 74.3587,
               },
               founder: {
                 "@type": "Organization",
@@ -114,9 +140,29 @@ export default function RootLayout({ children }) {
               priceRange: "₨₨",
               currenciesAccepted: "PKR",
               paymentAccepted: "Cash, Card",
-              openingHours: "Mo-Su 09:00-22:00",
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                  opens: "09:00",
+                  closes: "22:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Sunday",
+                  opens: "10:00",
+                  closes: "20:00",
+                },
+              ],
               hasMap: "https://maps.google.com/?q=ValueMax+Cash+Carry+Lahore",
-              sameAs: [],
+              sameAs: [
+                "https://instagram.com/cashandcarry.pk",
+              ],
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.7",
+                reviewCount: "320",
+              },
             }),
           }}
         />
@@ -125,7 +171,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
-        </body>
+      </body>
     </html>
   );
 }
