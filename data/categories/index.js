@@ -32,8 +32,14 @@ const MAP = {
   'cosmatics': cosmatics,
 };
 
+const NORMALIZED_MAP = Object.fromEntries(
+  Object.entries(MAP).map(([key, value]) => [String(key).toLowerCase(), value])
+);
+
 export function getProductsBySlug(slug) {
-  return MAP[slug] || [];
+  if (!slug) return [];
+  const key = String(slug).toLowerCase();
+  return NORMALIZED_MAP[key] || [];
 }
 
 export default MAP;
