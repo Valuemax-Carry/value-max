@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import CartDrawer from "./Cart";
 import Link from "next/link";
 import { Search, Menu as LucideMenu, X as LucideX, ShoppingCart } from 'lucide-react'
+import Image from "next/image";
 
 const CART_ITEMS = [
   { id: 1, name: "Basmati Rice 5kg", price: 1250, qty: 2, img: "🌾" },
@@ -49,11 +50,12 @@ export default function Navbar() {
 
           <Link href="/" className="flex items-center gap-2.5 no-underline shrink-0 hover:scale-[1.03] transition-transform duration-200">
             <div className="w-11 h-11 bg-[#b60a01] rounded-[10px] flex items-center justify-center relative overflow-hidden shrink-0">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffbc0b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="9" cy="21" r="1" fill="##ffbc0b" stroke="##ffbc0b"/>
-                <circle cx="20" cy="21" r="1" fill="##ffbc0b" stroke="##ffbc0b"/>
-                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
-              </svg>
+              <Image
+              src={"/favicon.png"}
+              alt="Logo"
+              width={100}
+              height={100}
+              />
               <div className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-[##ffbc0b] rounded-tl-[3px] opacity-25" />
             </div>
             <div className="leading-tight">
