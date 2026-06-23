@@ -16,7 +16,7 @@ const NAV_LINKS = [
   { label: "Home", path: "/" },
   { label: "Categories", path: "#categories" },
   { label: "Deals", path: "#deals" },
-  { label: "Bulk Orders", path: "/bulk-orders" },
+  { label: "Bulk Orders", path: "#bulk-order" },
   { label: "Contact", path: "#contact" },
 ];
 
