@@ -307,7 +307,26 @@ export default function Deals() {
           text-align: center;
           backdrop-filter: blur(4px);
         }
-
+        @media (max-width: 480px) {
+          .time-block {
+            padding: 12px 14px;
+            min-width: 58px;
+            border-radius: 12px;
+          }
+        }
+        .countdown-wrapper {
+          display: grid;
+          grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+          align-items: center;
+          gap: 6px;
+          width: 100%;
+          max-width: 420px;
+        }
+        @media (min-width: 1024px) {
+          .countdown-wrapper {
+            justify-self: start;
+          }
+        }
       `}</style>
 
       <div className="vm-deals bg-[#fafafa] min-h-screen" id='deals'>
@@ -461,9 +480,10 @@ export default function Deals() {
                 </div>
               </div>
 
-              <div className="flex-1 text-center lg:text-left">
+              <div className="flex-1 text-center lg:text-left w-full">
                 <p className="text-white/60 text-xs uppercase tracking-[3px] font-bold mb-6">Draw Countdown</p>
-                <div className="flex items-end gap-3 justify-center lg:justify-start mb-10">
+
+                <div className="countdown-wrapper mx-auto lg:mx-0 mb-10">
                   {[
                     {label:'DAYS', val: luckyTime.days},
                     {label:'HRS', val: luckyTime.h},
@@ -473,16 +493,18 @@ export default function Deals() {
                     <React.Fragment key={label}>
                       <div className="text-center">
                         <div className="time-block">
-                          <span className="block text-[2.2rem] sm:text-[2.8rem] font-extrabold text-white leading-none tracking-tight">{pad(val)}</span>
+                          <span className="block text-[1.6rem] sm:text-[2.2rem] font-extrabold text-white leading-none tracking-tight">{pad(val)}</span>
                         </div>
                         <p className="text-[#FFD100]/70 text-[10px] font-bold uppercase tracking-widest mt-2">{label}</p>
                       </div>
-                      {i < 3 && <span className="text-[#FFD100]/60 text-2xl font-black mb-7 leading-none">:</span>}
+                      {i < 3 && (
+                        <span className="text-[#FFD100]/60 text-2xl font-black leading-none pb-6 text-center">{':'}</span>
+                      )}
                     </React.Fragment>
                   ))}
                 </div>
 
-                <div className="space-y-4 mb-8 max-w-[400px] mx-auto lg:mx-0">
+                <div className="space-y-4 mb-8 mx-auto lg:mx-0">
                   {[
                     "Make any purchase at Cash & Carry to get an entry ticket.",
                     "More you spend, more entries you earn — Rs. 1,000 = 1 entry.",
@@ -496,7 +518,7 @@ export default function Deals() {
                 </div>
 
                 <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                  <Link href="/products" className="vm-primary-btn">
+                  <Link href="#categories" className="vm-primary-btn">
                     Shop & Enter Now
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                   </Link>
