@@ -159,7 +159,7 @@ export default function Hero() {
             <div className="relative z-10">
               <div className="vm-fade-up-1 inline-flex items-center gap-2 bg-red-50 border border-red-100 text-[#E8001C] text-xs font-semibold px-3.5 py-1.5 rounded-full mb-6 uppercase tracking-widest">
                 <span className="w-1.5 h-1.5 rounded-full bg-[##b60a01] animate-pulse inline-block" />
-                Now Open —  Rawalpindi's First
+                Now Open — Rawalpindi's First
               </div>
 
               <h1 className="vm-display text-[2.6rem] sm:text-[3.2rem] lg:text-[3.8rem] leading-[1.08] font-extrabold text-gray-900 mb-2 vm-fade-up-2">
@@ -204,7 +204,7 @@ export default function Hero() {
                 <div className="uppercase tracking-wider">In Pakistan</div>
               </div>
 
-              <div className="w-full max-w-[460px] aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden shadow-2xl border-4 border-white relative">
+              <div className="w-full max-w-[460px] h-[220px] sm:h-[280px] lg:h-auto lg:aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden shadow-2xl border-4 border-white relative">
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-gray-300">
                   <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="2" width="20" height="20" rx="4"/>

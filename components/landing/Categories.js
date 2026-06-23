@@ -173,7 +173,7 @@ export default function Categories() {
         }
       `}</style>
 
-      <section className="vm-hero bg-white py-20 sm:py-28 overflow-hidden">
+      <section className="vm-hero bg-white py-20 sm:py-28 overflow-hidden" id="categories">
         <div className="max-w-[1280px] mx-auto px-8 sm:px-12">
 
           <div className="text-center mb-12 sm:mb-16">

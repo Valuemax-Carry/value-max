@@ -1,9 +1,14 @@
 const PRODUCTS = [
-  { id: 'pl-1', name: 'Vitamin C 500mg 60tabs', price: 699, company: 'Local Pharma', img: '/products/sample/vitc.jpg' },
-  { id: 'pl-2', name: 'Multivitamins 60caps', price: 899, company: 'Local Pharma', img: '/products/sample/multivitamin.jpg' },
-  { id: 'pl-3', name: 'Protein Powder 1kg', price: 2499, company: 'HealthCo', img: '/products/sample/protein.jpg' },
-  { id: 'pl-4', name: 'Energy Drink 250ml', price: 199, company: 'Local Beverage', img: '/products/sample/energydrink.jpg' },
-  { id: 'pl-5', name: 'Honey Pure 500g', price: 699, company: 'Local Bee', img: '/products/sample/honey.jpg' },
+  { id: 'ps-1', name: 'Masoor Dal (Red Lentils) 1kg', price: 220, company: 'Local Mill', img: 'https://source.unsplash.com/featured/?masoor%20dal' },
+  { id: 'ps-2', name: 'Chana Dal 1kg', price: 200, company: 'Local Mill', img: 'https://source.unsplash.com/featured/?chana%20dal' },
+  { id: 'ps-3', name: 'Moong Dal 1kg', price: 240, company: 'Local Mill', img: 'https://source.unsplash.com/featured/?moong%20dal' },
+  { id: 'ps-4', name: 'Urad Dal 1kg', price: 260, company: 'Local Mill', img: 'https://source.unsplash.com/featured/?urad%20dal' },
+  { id: 'ps-5', name: 'Chickpeas (Kabuli Chana) 1kg', price: 180, company: 'Local Supplier', img: 'https://source.unsplash.com/featured/?chickpeas' },
+  { id: 'ps-6', name: 'Toor/Arhar Dal 1kg', price: 275, company: 'Local Mill', img: 'https://source.unsplash.com/featured/?toor%20dal' },
+  { id: 'ps-7', name: 'Rajma (Kidney Beans) 1kg', price: 320, company: 'Local Supplier', img: 'https://source.unsplash.com/featured/?kidney%20beans' },
+  { id: 'ps-8', name: 'Whole Moong (Green Gram) 1kg', price: 350, company: 'Local Mill', img: 'https://source.unsplash.com/featured/?moong' },
+  { id: 'ps-9', name: 'Split Peas 1kg', price: 190, company: 'Local Supplier', img: 'https://source.unsplash.com/featured/?split%20peas' },
+  { id: 'ps-10', name: 'Mixed Pulses 1kg', price: 299, company: 'Local Pack', img: 'https://source.unsplash.com/featured/?pulses' },
 ];
 
 export default PRODUCTS;

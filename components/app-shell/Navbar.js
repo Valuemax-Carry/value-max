@@ -13,7 +13,7 @@ const CART_ITEMS = [
 
 const NAV_LINKS = [
   { label: "Home", path: "/" },
-  { label: "Categories", path: "/categories" },
+  { label: "Categories", path: "#categories" },
   { label: "Deals", path: "/deals" },
   { label: "Bulk Orders", path: "/bulk-orders" },
   { label: "Contact", path: "#contact" },
