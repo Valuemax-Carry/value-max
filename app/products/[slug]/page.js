@@ -12,10 +12,11 @@ export default function Page({ params }) {
   const [mounted, setMounted] = useState(false);
   const [buyProduct, setBuyProduct] = useState(null);
 
-  const WHATSAPP_NUMBER = "923001234567";
-  const EMAIL = "valuemax@example.com";
-  const LOCATION = "123 Main Bazaar, Lahore, Pakistan";
-  const MAPS_LINK = "https://maps.google.com/?q=123+Main+Bazaar+Lahore+Pakistan";
+  const WHATSAPP_NUMBER = "03085518210";
+  const EMAIL = "isaamir81@gmail.com";
+  const LOCATION = "Islam Plaza, Main Bazar, Chak Beli Khan, Postal Code 47600, Tehsil & District Rawalpindi";
+    const MAPS_LINK = "https://maps.google.com/?q=123+Main+Bazaar+Lahore+Pakistan";
+
 
   useEffect(() => {
     async function init() {
@@ -244,7 +245,7 @@ export default function Page({ params }) {
       </div>
 
       {buyProduct && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+        <div className="fixed inset-0 z-50 pt-20 mt-15 flex items-center justify-center px-4">
           <div className="vm-overlay absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setBuyProduct(null)} />
           <div className="vm-popup relative bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden">
             <div className="bg-[#b60a01] px-6 py-4 flex items-start justify-between gap-3">
@@ -288,7 +289,7 @@ export default function Page({ params }) {
                   {EMAIL}
                 </a>
 
-                <a
+                  <a
                   href={MAPS_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -298,13 +299,6 @@ export default function Page({ params }) {
                   {LOCATION}
                 </a>
               </div>
-
-              <button
-                onClick={() => setBuyProduct(null)}
-                className="mt-4 w-full text-center text-gray-400 hover:text-[#b60a01] text-sm font-semibold py-2 transition-colors duration-150"
-              >
-                Close
-              </button>
             </div>
           </div>
         </div>
