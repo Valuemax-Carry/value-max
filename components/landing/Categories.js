@@ -8,21 +8,18 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const CATEGORIES = [
-  { id: 1, slug: "personal-care-hair", title: "Personal Care & Hair", image: "/ProdcutsBanner/1.png" },
-  { id: 2, slug: "personal-care-skin", title: "Personal Care & Skin", image: "/ProdcutsBanner/2.png" },
-  { id: 3, slug: "personal-care-oral", title: "Personal Care & Oral", image: "/ProdcutsBanner/3.png" },
-  { id: 4, slug: "baby-care", title: "Baby Care", image: "/ProdcutsBanner/4.png" },
-  { id: 5, slug: "drinks-beverages", title: "Drinks & Beverages", image: "/ProdcutsBanner/5.png" },
-  { id: 6, slug: "snacks", title: "Snacks", image: "/ProdcutsBanner/6.png" },
-  { id: 7, slug: "tea-coffee", title: "Tea & Coffee", image: "/ProdcutsBanner/7.png" },
-  { id: 8, slug: "dairy", title: "Dairy Products", image: "/ProdcutsBanner/8.png" },
-  { id: 9, slug: "pluses", title: "Pluses", image: "/ProdcutsBanner/9.png" },
-  { id: 10, slug: "Rice", title: "Rice", image: "/ProdcutsBanner/10.png" },
-  { id: 11, slug: "oil-ghee", title: "Oil & Ghee", image: "/ProdcutsBanner/11.png" },
-  { id: 12, slug: "flour", title: "Flour", image: "/ProdcutsBanner/12.png" },
-  { id: 13, slug: "sugar", title: "Sugar", image: "/ProdcutsBanner/13.png" },
-  { id: 14, slug: "detergents", title: "Detergents", image: "/ProdcutsBanner/14.png" },
-  { id: 15, slug: "cosmatics", title: "Cosmatics", image: "/ProdcutsBanner/15.png" },
+  { id: 1, slug: "baby-care", title: "Baby Care", image: "/ProdcutsBanner/4.png" },
+  { id: 2, slug: "drinks-beverages", title: "Drinks & Beverages", image: "/ProdcutsBanner/5.png" },
+  { id: 3, slug: "snacks", title: "Snacks", image: "/ProdcutsBanner/6.png" },
+  { id: 4, slug: "tea-coffee", title: "Tea & Coffee", image: "/ProdcutsBanner/7.png" },
+  { id: 5, slug: "dairy", title: "Dairy Products", image: "/ProdcutsBanner/8.png" },
+  { id: 6, slug: "pluses", title: "Pluses", image: "/ProdcutsBanner/9.png" },
+  { id: 7, slug: "Rice", title: "Rice", image: "/ProdcutsBanner/10.png" },
+  { id: 8, slug: "oil-ghee", title: "Oil & Ghee", image: "/ProdcutsBanner/11.png" },
+  { id: 9, slug: "flour", title: "Flour", image: "/ProdcutsBanner/12.png" },
+  { id: 10, slug: "sugar", title: "Sugar", image: "/ProdcutsBanner/13.png" },
+  { id: 11, slug: "detergents", title: "Detergents", image: "/ProdcutsBanner/14.png" },
+  { id: 12, slug: "cosmatics", title: "Cosmatics", image: "/ProdcutsBanner/15.png" },
 ];
 
 export default function Categories() {

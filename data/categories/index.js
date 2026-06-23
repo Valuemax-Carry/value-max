@@ -1,7 +1,3 @@
-import personalCareHair from './personal-care-hair';
-import personalCareSkin from './personal-care-skin';
-import personalCareOral from './personal-care-oral';
-import babyCare from './baby-care';
 import drinksBeverages from './drinks-beverages';
 import snacks from './snacks';
 import teaCoffee from './tea-coffee';
@@ -15,10 +11,6 @@ import detergents from './detergents';
 import cosmatics from './cosmatics';
 
 const MAP = {
-  'personal-care-hair': personalCareHair,
-  'personal-care-skin': personalCareSkin,
-  'personal-care-oral': personalCareOral,
-  'baby-care': babyCare,
   'drinks-beverages': drinksBeverages,
   'snacks': snacks,
   'tea-coffee': teaCoffee,
