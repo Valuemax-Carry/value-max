@@ -84,7 +84,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-1.5 ml-auto shrink-0">
-            <button className="hidden md:block border-2 border-[##b60a01] text-[#E8001C] hover:bg-[#E8001C] hover:text-white hover:-translate-y-px bg-transparent text-[13px] font-semibold px-4 py-[7px] rounded-lg cursor-pointer transition-all duration-200 whitespace-nowrap">
+            <button className="hidden md:block border-2 border-[##b60a01] text-[#E8001C] hover:bg-[#b60a01] hover:text-white hover:-translate-y-px bg-transparent text-[13px] font-semibold px-4 py-[7px] rounded-lg cursor-pointer transition-all duration-200 whitespace-nowrap">
               Sign In
             </button>
 

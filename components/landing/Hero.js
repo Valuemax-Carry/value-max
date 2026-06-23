@@ -141,13 +141,13 @@ export default function Hero() {
       <section ref={heroRef} className="vm-hero bg-white overflow-hidden">
 
         <div className="relative bg-white overflow-hidden">
-          <div className="absolute top-0 right-0 w-[45%] h-full bg-[#E8001C] hidden lg:block" style={{clipPath: "polygon(12% 0, 100% 0, 100% 100%, 0% 100%)"}}>
+          <div className="absolute top-0 right-0 w-[45%] h-full bg-[#b60a01] hidden lg:block" style={{clipPath: "polygon(12% 0, 100% 0, 100% 100%, 0% 100%)"}}>
             <div className="absolute inset-0 opacity-10" style={{backgroundImage: "repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)", backgroundSize: "20px 20px"}} />
           </div>
 
           <div className="absolute top-6 right-0 w-full h-full hidden lg:block pointer-events-none">
-            <div className="absolute top-8 right-[8%] w-20 h-20 bg-[#FFD100] rounded-full opacity-20 vm-badge-float" style={{animationDelay:"0s"}} />
-            <div className="absolute top-32 right-[22%] w-10 h-10 bg-[#FFD100] rounded-full opacity-30 vm-badge-float" style={{animationDelay:"1s"}} />
+            <div className="absolute top-8 right-[8%] w-20 h-20 bg-[##ffbc0b] rounded-full opacity-20 vm-badge-float" style={{animationDelay:"0s"}} />
+            <div className="absolute top-32 right-[22%] w-10 h-10 bg-[#ffbc0b] rounded-full opacity-30 vm-badge-float" style={{animationDelay:"1s"}} />
             <div className="absolute bottom-20 right-[6%] w-14 h-14 bg-white rounded-full opacity-15 vm-badge-float" style={{animationDelay:"1.5s"}} />
           </div>
 
@@ -155,7 +155,7 @@ export default function Hero() {
 
             <div className="relative z-10">
               <div className="vm-fade-up-1 inline-flex items-center gap-2 bg-red-50 border border-red-100 text-[#E8001C] text-xs font-semibold px-3.5 py-1.5 rounded-full mb-6 uppercase tracking-widest">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#E8001C] animate-pulse inline-block" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[##b60a01] animate-pulse inline-block" />
                 Now Open —  Rawalpindi's First
               </div>
 
@@ -177,7 +177,7 @@ export default function Hero() {
               </p>
 
               <div className="flex flex-wrap gap-3 mb-10 vm-fade-up-4">
-                <button className="vm-cta-primary vm-btn-hover bg-[#E8001C] hover:bg-[#c0001a] text-white font-bold text-sm px-7 py-3.5 rounded-xl border-none cursor-pointer">
+                <button className="vm-cta-primary vm-btn-hover bg-[#b60a01] hover:bg-[#c0001a] text-white font-bold text-sm px-7 py-3.5 rounded-xl border-none cursor-pointer">
                   Shop Now →
                 </button>
                 <button className="vm-outline-hover border-2 border-gray-200 text-gray-800 font-semibold text-sm px-7 py-3.5 rounded-xl bg-transparent cursor-pointer">
@@ -196,7 +196,7 @@ export default function Hero() {
             </div>
 
             <div className="relative z-10 flex flex-col items-center lg:items-end vm-fade-in-6">
-              <div className="vm-badge-float absolute -top-4 -left-4 lg:-top-6 lg:-left-8 bg-[#FFD100] text-[#7a5800] text-[11px] font-bold px-3.5 py-2 rounded-xl shadow-lg z-20 leading-tight text-center">
+              <div className="vm-badge-float absolute -top-4 -left-4 lg:-top-6 lg:-left-8 bg-[#ffbc0b] text-[#7a5800] text-[11px] font-bold px-3.5 py-2 rounded-xl shadow-lg z-20 leading-tight text-center">
                 <div className="text-lg font-black leading-none">1st</div>
                 <div className="uppercase tracking-wider">In Pakistan</div>
               </div>
@@ -229,7 +229,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="bg-[#E8001C] py-3.5 overflow-hidden relative">
+        <div className="bg-[#b60a01] py-3.5 overflow-hidden relative">
           <div className="flex overflow-hidden">
             <div className="vm-ticker-track">
               {[...Array(2)].map((_, r) => (
@@ -295,7 +295,7 @@ export default function Hero() {
               />
               <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/40 to-transparent z-20 flex items-end px-6 py-4">
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#E8001C] animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-[#b60a01] animate-pulse" />
                   <span className="text-white text-xs font-semibold tracking-wide uppercase">Live Store — Lahore</span>
                 </div>
                 <div className="ml-auto text-[#FFD100] text-xs font-bold tracking-wide">ValueMax Cash &amp; Carry</div>
@@ -309,7 +309,6 @@ export default function Hero() {
             </p>
           </div>
         </div>
-
       </section>
     </>
   );
