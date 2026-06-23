@@ -145,7 +145,7 @@ export default function Categories() {
 
         .category-btn {
           display: inline-block;
-          background: #E8001C;
+          background: #b60a01;
           color: #fff;
           font-weight: 700;
           font-size: 11px;
@@ -153,7 +153,7 @@ export default function Categories() {
           border-radius: 7px;
           text-transform: uppercase;
           letter-spacing: 0.08em;
-          border: 1.5px solid #FFD100;
+          border: 1.5px solid #b60a01;
           opacity: 0;
           transform: translateY(10px);
           transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.3s ease, background 0.2s ease;
@@ -162,8 +162,8 @@ export default function Categories() {
           margin-top: 8px;
         }
         .category-btn:hover {
-          background: #FFD100;
-          color: #b60a01;
+          background: #c0001a;
+          color: #fff;
         }
 
         @media (max-width: 640px) {
