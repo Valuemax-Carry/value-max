@@ -1,0 +1,39 @@
+import personalCareHair from './personal-care-hair';
+import personalCareSkin from './personal-care-skin';
+import personalCareOral from './personal-care-oral';
+import babyCare from './baby-care';
+import drinksBeverages from './drinks-beverages';
+import snacks from './snacks';
+import teaCoffee from './tea-coffee';
+import dairy from './dairy';
+import pluses from './pluses';
+import Rice from './Rice';
+import oilGhee from './oil-ghee';
+import flour from './flour';
+import sugar from './sugar';
+import detergents from './detergents';
+import cosmatics from './cosmatics';
+
+const MAP = {
+  'personal-care-hair': personalCareHair,
+  'personal-care-skin': personalCareSkin,
+  'personal-care-oral': personalCareOral,
+  'baby-care': babyCare,
+  'drinks-beverages': drinksBeverages,
+  'snacks': snacks,
+  'tea-coffee': teaCoffee,
+  'dairy': dairy,
+  'pluses': pluses,
+  'Rice': Rice,
+  'oil-ghee': oilGhee,
+  'flour': flour,
+  'sugar': sugar,
+  'detergents': detergents,
+  'cosmatics': cosmatics,
+};
+
+export function getProductsBySlug(slug) {
+  return MAP[slug] || [];
+}
+
+export default MAP;
