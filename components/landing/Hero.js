@@ -273,7 +273,7 @@ export default function Hero() {
             <div className="text-center mb-10">
               <div className="text-[11px] uppercase tracking-[3px] text-[#E8001C] font-bold mb-2">Store in Action</div>
               <h2 className="vm-display text-3xl sm:text-4xl font-extrabold text-gray-900">See ValueMax in Action</h2>
-              <p className="text-gray-400 text-sm mt-2 max-w-md mx-auto">Take a virtual tour of Lahore's most modern cash & carry experience</p>
+              <p className="text-gray-400 text-sm mt-2 max-w-md mx-auto">Take a virtual tour of Rawalpindi's most modern cash & carry experience</p>
             </div>
 
             <div className="vm-video-wrapper relative w-full max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-100" style={{aspectRatio: "16/9"}}>
@@ -296,7 +296,7 @@ export default function Hero() {
               <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/40 to-transparent z-20 flex items-end px-6 py-4">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#b60a01] animate-pulse" />
-                  <span className="text-white text-xs font-semibold tracking-wide uppercase">Live Store — Lahore</span>
+                  <span className="text-white text-xs font-semibold tracking-wide uppercase">Live Store — Rawalpindi</span>
                 </div>
                 <div className="ml-auto text-[#FFD100] text-xs font-bold tracking-wide">ValueMax Cash &amp; Carry</div>
               </div>
