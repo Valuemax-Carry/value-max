@@ -21,12 +21,12 @@ const NAV_LINKS = [
 ]
 
 const CATEGORIES = [
-  { label: "Cooking Oil & Ghee", href: "/products" },
-  { label: "Rice & Flour", href: "/products" },
-  { label: "Tea & Coffee", href: "/products" },
-  { label: "Snacks & Biscuits", href: "/products" },
-  { label: "Dairy Products", href: "/products" },
-  { label: "Household Items", href: "/products" },
+  { label: "Cooking Oil & Ghee", href: "/products/oil-ghee" },
+  { label: "Rice & Flour", href: "/products/rice" },
+  { label: "Tea & Coffee", href: "/products/tea-coffee" },
+  { label: "Snacks & Biscuits", href: "/products/snacks" },
+  { label: "Dairy Products", href: "/products/dairy" },
+  { label: "Household Items", href: "/products/detergents" },
 ]
 
 const CURRENT_YEAR = new Date().getFullYear()
