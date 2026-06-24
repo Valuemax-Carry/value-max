@@ -228,8 +228,7 @@ export default function Page({ params }) {
                     <div className="px-4 py-4">
                       <p className="font-semibold text-gray-900 text-[14px] leading-snug mb-3 line-clamp-2">{p.name}</p>
                       <div className="flex items-center justify-between">
-                        <span className="text-[#b60a01] font-extrabold text-base">Rs. {p.price?.toLocaleString()}</span>
-                        <button
+                                                <button
                           onClick={() => setBuyProduct(p)}
                           className="bg-[#b60a01] hover:bg-[#9a0800] text-white text-[11px] font-bold px-3.5 py-1.5 rounded-lg transition-colors duration-150"
                         >
