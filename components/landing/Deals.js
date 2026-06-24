@@ -29,7 +29,7 @@ const LOYALTY_PERKS = [
       </svg>
     ),
     title: "Free Home Delivery",
-    desc: "Members with Gold status enjoy free delivery on all orders above Rs. 2,000.",
+    desc: "Members with Gold status enjoy free delivery on all orders above Rs. 5,000.",
   },
   {
     icon: (
