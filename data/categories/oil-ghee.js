@@ -1,9 +1,16 @@
 const PRODUCTS = [
-  { id: 'og-1', name: 'Dalda Vegetable Ghee 1.5kg', price: 699, company: 'Dalda Foods', img: 'https://source.unsplash.com/featured/?ghee' },
-  { id: 'og-2', name: 'Sufi Pure Ghee 1kg', price: 799, company: 'Sufi Foods', img: 'https://source.unsplash.com/featured/?ghee' },
-  { id: 'og-3', name: 'Olive Oil 500ml', price: 1299, company: 'Imported Goods', img: 'https://source.unsplash.com/featured/?olive%20oil' },
-  { id: 'og-4', name: 'Sunflower Oil 1L', price: 420, company: 'Local Oil Co', img: 'https://source.unsplash.com/featured/?sunflower%20oil' },
-  { id: 'og-5', name: 'Mustard Oil 1L', price: 399, company: 'Local Oil Co', img: 'https://source.unsplash.com/featured/?mustard%20oil' },
+  { id: 'og-1', name: 'Dalda Cooking Oil 3 Litre', price: 1875, company: 'Dalda', img: '/ProdcutsImages/OilGhee/1.jpg' },
+  { id: 'og-2', name: 'Dalda Cooking Oil Tin 5 Litre', price: 2890, company: 'Dalda', img: '/ProdcutsImages/OilGhee/2.jpg' },
+  { id: 'og-3', name: 'Dalda Sunflower Oil Nozzle 1 Litre', price: 596, company: 'Dalda', img: '/ProdcutsImages/OilGhee/3.jpg' },
+  { id: 'og-4', name: 'Mezan Banaspati Pouch 1 kg', price: 570, company: 'Mezan', img: '/ProdcutsImages/OilGhee/4.jpg' },
+  { id: 'og-5', name: 'Mezan Canalo Oil Pouch 1 Litre', price: 568, company: 'Mezan', img: '/ProdcutsImages/OilGhee/5.jpg' },
+  { id: 'og-6', name: 'Mezan Canalo Oil Bottle 3 Litre', price: 1740, company: 'Mezan', img: '/ProdcutsImages/OilGhee/6.jpg' },
+  { id: 'og-7', name: 'Dalda Corn Oil Bottle 4 Litre', price: 3395, company: 'Dalda', img: '/ProdcutsImages/OilGhee/7.jpg' },
+  { id: 'og-8', name: 'Sufi Banaspati Tin 2.5 kg', price: 1509, company: 'Sufi', img: '/ProdcutsImages/OilGhee/8.jpg' },
+  { id: 'og-9', name: 'Sufi Sunflower Oil Pouch 1 Litre', price: 599, company: 'Sufi', img: '/ProdcutsImages/OilGhee/9.jpg' },
+  { id: 'og-10', name: 'Sufi Sunflower Oil Can 10 Litre', price: 6295, company: 'Sufi', img: '/ProdcutsImages/OilGhee/10.jpg' },
+  { id: 'og-11', name: 'Sufi Banaspati Pouch 1 Kg', price: 586, company: 'Sufi', img: '/ProdcutsImages/OilGhee/11.jpg' },
+
 ];
 
 export default PRODUCTS;
