@@ -20,10 +20,6 @@ export default function BuyModal({ buyProduct, onClose, WHATSAPP_NUMBER, EMAIL, 
         </div>
 
         <div className="px-6 py-5">
-          <div className="flex items-center justify-between mb-5 pb-4 border-b border-gray-100">
-            <span className="text-gray-500 text-sm font-medium">Price</span>
-            <span className="text-[#b60a01] font-extrabold text-xl">Rs. {buyProduct.price?.toLocaleString()}</span>
-          </div>
 
           <p className="text-[12px] uppercase tracking-[2px] text-gray-400 font-bold mb-3">Contact Us To Order</p>
 
