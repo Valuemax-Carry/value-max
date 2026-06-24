@@ -29,6 +29,8 @@ const CATEGORIES = [
   { label: "Household Items", href: "/products" },
 ]
 
+const CURRENT_YEAR = new Date().getFullYear()
+
 export default function Footer() {
   return (
     <>
@@ -379,7 +381,7 @@ export default function Footer() {
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-white/30 text-xs text-center sm:text-left">
-              © {new Date().getFullYear()}ValueMax Cash & Carry Rawalpindi. All rights reserved.
+              © {CURRENT_YEAR} ValueMax Cash & Carry Rawalpindi. All rights reserved.
             </p>
             <div className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#b60a01] animate-pulse inline-block" />

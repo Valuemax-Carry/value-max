@@ -7,7 +7,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const CATEGORIES = [
+export const CATEGORIES = [
   { id: 1, slug: "baby-care", title: "Baby Care", image: "/ProdcutsBanner/4.png" },
   { id: 2, slug: "drinks-beverages", title: "Drinks & Beverages", image: "/ProdcutsBanner/5.png" },
   { id: 3, slug: "snacks", title: "Snacks", image: "/ProdcutsBanner/6.png" },

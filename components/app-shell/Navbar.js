@@ -5,6 +5,8 @@ import CartDrawer from "./Cart";
 import Link from "next/link";
 import { Search, Menu as LucideMenu, X as LucideX, ShoppingCart } from 'lucide-react'
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { CATEGORIES } from "../landing/Categories";
 
 const CART_ITEMS = [
   { id: 1, name: "Basmati Rice 5kg", price: 1250, qty: 2, img: "🌾" },
@@ -26,6 +28,9 @@ export default function Navbar() {
   const [searchFocused, setSearchFocused] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const router = useRouter();
+
+  const matched = searchQuery.trim() ? CATEGORIES.filter(c => c.title.toLowerCase().startsWith(searchQuery.trim().toLowerCase())) : [];
 
   const totalItems = CART_ITEMS.reduce((s, i) => s + i.qty, 0);
   const totalPrice = CART_ITEMS.reduce((s, i) => s + i.price * i.qty, 0);
@@ -76,11 +81,22 @@ export default function Navbar() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onFocus={() => { setSearchFocused(true); setCartOpen(false); }}
-                onBlur={() => setSearchFocused(false)}
+                onBlur={() => setTimeout(()=>setSearchFocused(false), 120)}
               />
               <button className="bg-[#b60a01] hover:bg-[#c0001a] border-none px-4 h-11 flex items-center justify-center shrink-0 transition-colors duration-200 cursor-pointer">
                 <Search size={18} color="white" />
               </button>
+              {searchFocused && matched.length > 0 && (
+                <div className="absolute left-0 right-0 top-full mt-2 bg-white border border-gray-100 rounded-lg shadow-lg z-50">
+                  <ul className="max-h-56 overflow-auto">
+                    {matched.slice(0,6).map((c) => (
+                      <li key={c.slug} className="px-3 py-2 hover:bg-gray-50 cursor-pointer" onMouseDown={(e)=>{e.preventDefault(); setSearchQuery(""); setSearchFocused(false); setMenuOpen(false); setCartOpen(false); router.push(`/products/${c.slug}`);}}>
+                        {c.title}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
 
@@ -134,12 +150,24 @@ export default function Navbar() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onFocus={() => { setSearchFocused(true); setCartOpen(false); }}
-                onBlur={() => setSearchFocused(false)}
+                onBlur={() => setTimeout(()=>setSearchFocused(false), 120)}
               />
               <button className="bg-[##b60a01] hover:bg-[#c0001a] border-none px-4 h-10 flex items-center justify-center shrink-0 transition-colors duration-200 cursor-pointer">
                 <Search size={16} color="white" />
               </button>
             </div>
+
+            {searchFocused && matched.length > 0 && (
+              <div className="mt-1 bg-white border border-gray-100 rounded-lg shadow-lg z-50">
+                <ul className="max-h-52 overflow-auto">
+                  {matched.slice(0,6).map((c) => (
+                    <li key={c.slug} className="px-3 py-2 hover:bg-gray-50 cursor-pointer" onMouseDown={(e)=>{e.preventDefault(); setSearchQuery(""); setSearchFocused(false); setMenuOpen(false); setCartOpen(false); router.push(`/products/${c.slug}`);}}>
+                      {c.title}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             {NAV_LINKS.map((link) => (
               <Link
