@@ -7,7 +7,7 @@ import "swiper/css";
 
 const STATS = [
   { value: "10,000+", label: "Products" },
-  { value: "Rs. 2K", label: "Free Delivery Above" },
+  { value: "Rs. 5K", label: "Free Delivery Above" },
   { value: "1st", label: "Physical Store" },
   { value: "100%", label: "Wholesale Prices" },
 ];
@@ -240,10 +240,11 @@ export default function Hero() {
                   className="absolute inset-0 w-full h-full"
                 >
                   {[
+                    "/HeroSwiper/2.webp",
+                    "/HeroSwiper/4.webp",
                     "/HeroSwiper/1.jpg",
-                    "/HeroSwiper/2.jpg",
-                    "/HeroSwiper/3.jpg",
-                    "/HeroSwiper/4.jpg"
+                    "/HeroSwiper/5.jpg",
+                    "/HeroSwiper/3.webp"
                   ].map((src, i) => (
                     <SwiperSlide key={i}>
                       <img src={src} alt={`hero-${i}`} className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" />
@@ -265,7 +266,7 @@ export default function Hero() {
             <div className="vm-ticker-track">
               {[...Array(2)].map((_, r) => (
                 <div key={r} className="flex items-center gap-0">
-                  {["📦 Wholesale Prices", "🛒 10,000+ Products", "🚚 Free Delivery above Rs. 2,000", "⭐ Pakistan's First Smartest Cash & Carry", "📍 Now Open in Rawalpindi", "💛 Ashraf & Sons Traders", "📦 Bulk Orders Welcome", "🔥 New Deals Every Week"].map((item, i) => (
+                  {["📦 Wholesale Prices", "🛒 10,000+ Products", "🚚 Free Delivery above Rs. 5,000", "⭐ Pakistan's First Smartest Cash & Carry", "📍 Now Open in Rawalpindi", "💛 Ashraf & Sons Traders", "📦 Bulk Orders Welcome", "🔥 New Deals Every Week"].map((item, i) => (
                     <span key={i} className="text-white text-[13px] font-semibold whitespace-nowrap px-8 flex items-center gap-2">
                       {item}
                       <span className="text-[#FFD100] font-black mx-2">·</span>

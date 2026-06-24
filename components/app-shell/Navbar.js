@@ -42,7 +42,7 @@ export default function Navbar() {
 
         <div className="hidden md:flex bg-[#b60a01] justify-center gap-8 py-1.5 text-[11.5px] text-white/90 tracking-wide">
           <span>📦 Bulk Orders Welcome</span>
-          <span>🚚 Free Delivery on Orders above Rs.2,000</span>
+          <span>🚚 Free Delivery on Orders above Rs.5,000</span>
           <span>☎️ +03085518210</span>
         </div>
 
