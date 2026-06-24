@@ -8,7 +8,8 @@ import oilGhee from './oil-ghee';
 import flour from './flour';
 import sugar from './sugar';
 import detergents from './detergents';
-import cosmatics from './cosmatics';
+import icecream from './icecream';
+import frozen from "./frozen";
 
 const MAP = {
   'drinks-beverages': drinksBeverages,
@@ -21,7 +22,8 @@ const MAP = {
   'flour': flour,
   'sugar': sugar,
   'detergents': detergents,
-  'cosmatics': cosmatics,
+  'icecream': icecream,
+  'frozen': frozen
 };
 
 const NORMALIZED_MAP = Object.fromEntries(

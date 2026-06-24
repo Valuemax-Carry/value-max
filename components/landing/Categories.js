@@ -19,7 +19,8 @@ const CATEGORIES = [
   { id: 9, slug: "flour", title: "Flour", image: "/ProdcutsBanner/12.png" },
   { id: 10, slug: "sugar", title: "Sugar", image: "/ProdcutsBanner/13.png" },
   { id: 11, slug: "detergents", title: "Detergents", image: "/ProdcutsBanner/14.png" },
-  { id: 12, slug: "cosmatics", title: "Cosmatics", image: "/ProdcutsBanner/15.png" },
+  { id: 12, slug: "icecream", title: "IceCream", image: "/ProdcutsBanner/17.png" },
+  { id: 13, slug: "frozen", title: "Frozen", image: "/ProdcutsBanner/16.png" },
 ];
 
 export default function Categories() {
