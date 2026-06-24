@@ -184,7 +184,7 @@ export default function Hero() {
 
               <h1 className="vm-display text-[2rem] xs:text-[2.2rem] sm:text-[3.2rem] lg:text-[3.8rem] leading-[1.08] font-extrabold text-gray-900 mb-2 vm-fade-up-2">
                 Pakistan's{" "}
-                <span className="vm-underline-anim text-[#E8001C]">Smartest</span>
+                <span className="vm-underline-anim text-[#E8001C]">Trusted</span>
               </h1>
               <h1 className="vm-display text-[2rem] xs:text-[2.2rem] sm:text-[3.2rem] lg:text-[3.8rem] leading-[1.08] font-extrabold text-gray-900 mb-4 vm-fade-up-2">
                 Cash &amp; Carry Store
@@ -196,7 +196,9 @@ export default function Hero() {
 
               <p className="text-[13px] text-gray-400 font-medium tracking-wide mb-6 vm-fade-up-3">
                 A project of{" "}
-                <span className="text-gray-700 font-semibold">Ashraf &amp; Sons Traders</span>
+                <span className="text-gray-700 font-semibold">Ashraf &amp; Sons Traders 
+                </span>
+                &nbsp; Pakistan's First Cash & Carry
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8 vm-fade-up-4">
@@ -266,7 +268,7 @@ export default function Hero() {
             <div className="vm-ticker-track">
               {[...Array(2)].map((_, r) => (
                 <div key={r} className="flex items-center gap-0">
-                  {["📦 Wholesale Prices", "🛒 10,000+ Products", "🚚 Free Delivery above Rs. 5,000", "⭐ Pakistan's First Smartest Cash & Carry", "📍 Now Open in Rawalpindi", "💛 Ashraf & Sons Traders", "📦 Bulk Orders Welcome", "🔥 New Deals Every Week"].map((item, i) => (
+                  {["📦 Wholesale Prices", "🛒 10,000+ Products", "🚚 Free Delivery above Rs. 5,000", "⭐ Pakistan's Trusted Cash & Carry", "📍 Now Open in Rawalpindi", "💛 Ashraf & Sons Traders", "📦 Bulk Orders Welcome", "🔥 New Deals Every Week"].map((item, i) => (
                     <span key={i} className="text-white text-[13px] font-semibold whitespace-nowrap px-8 flex items-center gap-2">
                       {item}
                       <span className="text-[#FFD100] font-black mx-2">·</span>

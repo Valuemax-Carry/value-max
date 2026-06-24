@@ -16,7 +16,7 @@ export default function Page({ params }) {
   const WHATSAPP_NUMBER = "03085518210";
   const EMAIL = "isaamir81@gmail.com";
   const LOCATION = "Islam Plaza, Main Bazar, Chak Beli Khan, Postal Code 47600, Tehsil & District Rawalpindi";
-    const MAPS_LINK = "https://maps.google.com/?q=123+Main+Bazaar+Lahore+Pakistan";
+    const MAPS_LINK = "https://maps.app.goo.gl/2FuBRsf7LCJKKZ1C8";
 
 
   useEffect(() => {

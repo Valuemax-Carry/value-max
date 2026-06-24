@@ -7,7 +7,7 @@ import { Phone, Mail, MapPin, MessageCircle, Clock, ChevronRight, Star, PhoneCal
 const WHATSAPP_NUMBER = "03085518210"
 const EMAIL = "isaamir81@gmail.com"
 const INSTAGRAM = "https://instagram.com/cashandcarry.pk"
-const MAPS_LINK = "https://maps.google.com/?q=Cash+and+Carry+Lahore"
+const MAPS_LINK = "https://maps.app.goo.gl/2FuBRsf7LCJKKZ1C8"
 const LOCATION = "Islam Plaza, Main Bazar, Chak Beli Khan, Postal Code 47600, Tehsil & District Rawalpindi"
 const PHONE = "+03085518210"
 

@@ -97,7 +97,7 @@ export default function Navbar() {
               />
             </div>
             <div className="leading-tight">
-              <div className="text-[19px] font-extrabold text-[#E8001C] tracking-tight">
+              <div className="text-[19px] font-extrabold text-[#b60a01] tracking-tight">
                 Value<span className="text-[#ffbc0b]">Max</span>
               </div>
               <div className="hidden md:block text-[9.5px] font-medium text-gray-400 uppercase tracking-[1.2px]">
