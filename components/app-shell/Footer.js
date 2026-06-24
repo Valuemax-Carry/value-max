@@ -353,8 +353,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <p className="text-white/35 text-[10px] uppercase tracking-widest font-semibold mb-0.5">Store Hours</p>
-                    <p className="text-white/80 text-sm font-semibold">Mon – Sat: 7am – 10pm</p>
-                    <p className="text-white/40 text-xs">Sun: 7am – 10pm</p>
+                    <p className="text-white/80 text-sm font-semibold">All Week Timings: 7am – 10pm</p>
                   </div>
                 </div>
 
