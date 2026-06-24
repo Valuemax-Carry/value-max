@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Phone, Mail, MapPin, MessageCircle, Clock, ChevronRight, Star, PhoneCall } from 'lucide-react'
 
 const WHATSAPP_NUMBER = "03085518210"
-const EMAIL = "isaamir81@gmail.com"
+const EMAIL = "valuemaxcc@gmail.com"
 const INSTAGRAM = "https://instagram.com/cashandcarry.pk"
 const MAPS_LINK = "https://maps.app.goo.gl/2FuBRsf7LCJKKZ1C8"
 const LOCATION = "Islam Plaza, Main Bazar, Chak Beli Khan, Postal Code 47600, Tehsil & District Rawalpindi"

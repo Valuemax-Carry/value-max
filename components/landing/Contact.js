@@ -20,7 +20,7 @@ const CONTACT_CARDS = [
       </svg>
     ),
     label: "Email Us",
-    value: "isaamir81@gmail.com",
+    value: "valuemaxcc@gmail.com",
   },
   {
     icon: (
