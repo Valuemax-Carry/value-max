@@ -56,11 +56,10 @@ export default function Navbar() {
               width={100}
               height={100}
               />
-              <div className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-[##ffbc0b] rounded-tl-[3px] opacity-25" />
             </div>
             <div className="leading-tight">
-              <div className="text-[19px] font-extrabold text-gray-900 tracking-tight">
-                Value<span className="text-[#E8001C]">Max</span>
+              <div className="text-[19px] font-extrabold text-[#E8001C] tracking-tight">
+                Value<span className="text-[#ffbc0b]">Max</span>
               </div>
               <div className="hidden md:block text-[9.5px] font-medium text-gray-400 uppercase tracking-[1.2px]">
                 Cash &amp; Carry
