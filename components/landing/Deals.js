@@ -61,14 +61,14 @@ export default function Deals() {
   const [luckyTime, setLuckyTime] = useState({ days: 0, h: 0, m: 0, s: 0 })
 
   useEffect(() => {
-    setLuckyTime(getTimeUntil("2026-07-15T00:00:00"))
+    setLuckyTime(getTimeUntil("2026-07-18T00:00:00"))
     const t = setTimeout(() => setVisible(true), 60)
     return () => clearTimeout(t)
   }, [])
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setLuckyTime(getTimeUntil("2026-07-15T00:00:00"))
+      setLuckyTime(getTimeUntil("2026-07-18T00:00:00"))
     }, 1000)
     return () => clearInterval(interval)
   }, [])
@@ -435,7 +435,7 @@ export default function Deals() {
                 <span className="text-[#FFD100]">Motorcycle — Free!</span>
               </h2>
               <p className="text-white/65 text-base sm:text-lg max-w-[540px] mx-auto leading-relaxed">
-                Every purchase enters you into our grand lucky draw. One lucky winner takes home a brand new bike on 15 July 2026.
+                Every purchase enters you into our grand lucky draw. One lucky winner takes home a brand new bike on 18 July 2026.
               </p>
             </div>
 
@@ -465,7 +465,7 @@ export default function Deals() {
                   <div className="mt-6 w-full border-t border-white/10 pt-5 flex items-center justify-between">
                     <div className="text-center">
                       <p className="text-white/40 text-[10px] uppercase tracking-widest">Draw Date</p>
-                      <p className="text-[#FFD100] font-bold text-sm mt-0.5">15 July 2026</p>
+                      <p className="text-[#FFD100] font-bold text-sm mt-0.5">18 July 2026</p>
                     </div>
                     <div className="w-px h-8 bg-white/10" />
                     <div className="text-center">
