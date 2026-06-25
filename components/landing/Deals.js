@@ -391,7 +391,7 @@ export default function Deals() {
                       <div className="flex items-end justify-between">
                         <div>
                           <p className="text-white/40 text-[10px] uppercase tracking-widest">Member Since</p>
-                          <p className="text-white font-semibold text-sm">Jan 2025</p>
+                          <p className="text-white font-semibold text-sm">25th June 2025</p>
                         </div>
                         <div className="text-right">
                           <p className="text-white/40 text-[10px] uppercase tracking-widest">Points</p>
