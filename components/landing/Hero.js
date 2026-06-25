@@ -162,20 +162,37 @@ export default function Hero() {
       `}</style>
 
       <section ref={heroRef} className="vm-hero bg-white overflow-hidden">
-
         <div className="relative bg-white overflow-hidden">
-          <div className="absolute top-0 right-0 w-[45%] h-full bg-[#b60a01] hidden lg:block" style={{clipPath: "polygon(12% 0, 100% 0, 100% 100%, 0% 100%)"}}>
-            <div className="absolute inset-0 opacity-10" style={{backgroundImage: "repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)", backgroundSize: "20px 20px"}} />
+          <div
+            className="absolute top-0 right-0 w-[45%] h-full bg-[#b60a01] hidden lg:block"
+            style={{ clipPath: "polygon(12% 0, 100% 0, 100% 100%, 0% 100%)" }}
+          >
+            <div
+              className="absolute inset-0 opacity-10"
+              style={{
+                backgroundImage:
+                  "repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)",
+                backgroundSize: "20px 20px",
+              }}
+            />
           </div>
 
           <div className="absolute top-6 right-0 w-full h-full hidden lg:block pointer-events-none">
-            <div className="absolute top-8 right-[8%] w-20 h-20 bg-[##ffbc0b] rounded-full opacity-20 vm-badge-float" style={{animationDelay:"0s"}} />
-            <div className="absolute top-32 right-[22%] w-10 h-10 bg-[#ffbc0b] rounded-full opacity-30 vm-badge-float" style={{animationDelay:"1s"}} />
-            <div className="absolute bottom-20 right-[6%] w-14 h-14 bg-white rounded-full opacity-15 vm-badge-float" style={{animationDelay:"1.5s"}} />
+            <div
+              className="absolute top-8 right-[8%] w-20 h-20 bg-[##ffbc0b] rounded-full opacity-20 vm-badge-float"
+              style={{ animationDelay: "0s" }}
+            />
+            <div
+              className="absolute top-32 right-[22%] w-10 h-10 bg-[#ffbc0b] rounded-full opacity-30 vm-badge-float"
+              style={{ animationDelay: "1s" }}
+            />
+            <div
+              className="absolute bottom-20 right-[6%] w-14 h-14 bg-white rounded-full opacity-15 vm-badge-float"
+              style={{ animationDelay: "1.5s" }}
+            />
           </div>
 
           <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 py-10 sm:py-20 lg:py-28 flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-10 lg:items-center">
-
             <div className="relative z-10">
               <div className="vm-fade-up-1 inline-flex items-center gap-2 bg-red-50 border border-red-100 text-[#E8001C] text-xs font-semibold px-3.5 py-1.5 rounded-full mb-5 uppercase tracking-widest">
                 <span className="w-1.5 h-1.5 rounded-full bg-[##b60a01] animate-pulse inline-block" />
@@ -184,21 +201,25 @@ export default function Hero() {
 
               <h1 className="vm-display text-[2rem] xs:text-[2.2rem] sm:text-[3.2rem] lg:text-[3.8rem] leading-[1.08] font-extrabold text-gray-900 mb-2 vm-fade-up-2">
                 Pakistan's{" "}
-                <span className="vm-underline-anim text-[#E8001C]">Trusted</span>
+                <span className="vm-underline-anim text-[#E8001C]">
+                  Trusted
+                </span>
               </h1>
               <h1 className="vm-display text-[2rem] xs:text-[2.2rem] sm:text-[3.2rem] lg:text-[3.8rem] leading-[1.08] font-extrabold text-gray-900 mb-4 vm-fade-up-2">
                 Cash &amp; Carry Store
               </h1>
 
               <p className="text-gray-500 text-sm sm:text-lg leading-relaxed max-w-[480px] mb-3 vm-fade-up-3">
-                Wholesale prices. Retail convenience. Everything your home or business needs — under one roof.
+                Fresh groceries. Everyday savings. Everything your family needs
+                with quality you can trust — all in one place.
               </p>
 
               <p className="text-[13px] text-gray-400 font-medium tracking-wide mb-6 vm-fade-up-3">
                 A project of{" "}
-                <span className="text-gray-700 font-semibold">Ashraf &amp; Sons Traders 
+                <span className="text-gray-700 font-semibold">
+                  Ashraf &amp; Sons Traders
                 </span>
-                &nbsp; Pakistan's First Cash & Carry
+                &nbsp; Cash & Carry
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8 vm-fade-up-4">
@@ -212,9 +233,16 @@ export default function Hero() {
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 vm-fade-up-5">
                 {STATS.map((s, i) => (
-                  <div key={i} className="vm-stat-card bg-white border border-gray-100 rounded-xl p-3.5 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
-                    <div className="text-[#E8001C] text-xl font-extrabold leading-tight">{s.value}</div>
-                    <div className="text-gray-400 text-[11px] font-medium mt-0.5 leading-tight">{s.label}</div>
+                  <div
+                    key={i}
+                    className="vm-stat-card bg-white border border-gray-100 rounded-xl p-3.5 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+                  >
+                    <div className="text-[#E8001C] text-xl font-extrabold leading-tight">
+                      {s.value}
+                    </div>
+                    <div className="text-gray-400 text-[11px] font-medium mt-0.5 leading-tight">
+                      {s.label}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -222,18 +250,42 @@ export default function Hero() {
 
             <div className="relative z-10 flex flex-col items-center lg:items-end vm-fade-in-6">
               <div className="vm-badge-float absolute -top-4 -left-4 lg:-top-6 lg:-left-8 bg-[#ffbc0b] text-[#7a5800] text-[11px] font-bold px-3.5 py-2 rounded-xl shadow-lg z-20 leading-tight text-center">
-                <div className="text-lg font-black leading-none">1st</div>
+                <div className="text-lg font-black leading-none">Trusted</div>
                 <div className="uppercase tracking-wider">In Pakistan</div>
               </div>
 
               <div className="vm-swiper-box w-full max-w-[460px] bg-gray-100 rounded-2xl overflow-hidden shadow-2xl border-4 border-white relative">
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-gray-300">
-                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="4"/>
-                    <polygon points="10,8 16,12 10,16" fill="currentColor" stroke="none"/>
+                  <svg
+                    width="56"
+                    height="56"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <rect x="2" y="2" width="20" height="20" rx="4" />
+                    <polygon
+                      points="10,8 16,12 10,16"
+                      fill="currentColor"
+                      stroke="none"
+                    />
                   </svg>
-                  <p className="text-sm font-medium text-gray-400">Store Tour Video</p>
-                  <p className="text-xs text-gray-300">Place your <code className="bg-gray-200 px-1 rounded text-gray-500">video.mp4</code> in <code className="bg-gray-200 px-1 rounded text-gray-500">/public</code></p>
+                  <p className="text-sm font-medium text-gray-400">
+                    Store Tour Video
+                  </p>
+                  <p className="text-xs text-gray-300">
+                    Place your{" "}
+                    <code className="bg-gray-200 px-1 rounded text-gray-500">
+                      video.mp4
+                    </code>{" "}
+                    in{" "}
+                    <code className="bg-gray-200 px-1 rounded text-gray-500">
+                      /public
+                    </code>
+                  </p>
                 </div>
                 <Swiper
                   modules={[Autoplay]}
@@ -246,10 +298,14 @@ export default function Hero() {
                     "/HeroSwiper/4.webp",
                     "/HeroSwiper/1.jpg",
                     "/HeroSwiper/5.jpg",
-                    "/HeroSwiper/3.webp"
+                    "/HeroSwiper/3.webp",
                   ].map((src, i) => (
                     <SwiperSlide key={i}>
-                      <img src={src} alt={`hero-${i}`} className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" />
+                      <img
+                        src={src}
+                        alt={`hero-${i}`}
+                        className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105"
+                      />
                     </SwiperSlide>
                   ))}
                 </Swiper>
@@ -257,7 +313,9 @@ export default function Hero() {
 
               <div className="flex items-center gap-2 mt-4 bg-white border border-gray-100 rounded-full px-4 py-2 shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-[12px] text-gray-500 font-medium">Store Open — Visit Us in Rawalpindi</span>
+                <span className="text-[12px] text-gray-500 font-medium">
+                  Store Open — Visit Us in Rawalpindi
+                </span>
               </div>
             </div>
           </div>
@@ -268,8 +326,20 @@ export default function Hero() {
             <div className="vm-ticker-track">
               {[...Array(2)].map((_, r) => (
                 <div key={r} className="flex items-center gap-0">
-                  {["📦 Wholesale Prices", "🛒 10,000+ Products", "🚚 Free Delivery above Rs. 5,000", "⭐ Pakistan's Trusted Cash & Carry", "📍 Now Open in Rawalpindi", "💛 Ashraf & Sons Traders", "📦 Bulk Orders Welcome", "🔥 New Deals Every Week"].map((item, i) => (
-                    <span key={i} className="text-white text-[13px] font-semibold whitespace-nowrap px-8 flex items-center gap-2">
+                  {[
+                    "📦 Wholesale Prices",
+                    "🛒 10,000+ Products",
+                    "🚚 Free Delivery above Rs. 5,000",
+                    "⭐ Pakistan's Trusted Cash & Carry",
+                    "📍 Now Open in Rawalpindi",
+                    "💛 Ashraf & Sons Traders",
+                    "📦 Bulk Orders Welcome",
+                    "🔥 New Deals Every Week",
+                  ].map((item, i) => (
+                    <span
+                      key={i}
+                      className="text-white text-[13px] font-semibold whitespace-nowrap px-8 flex items-center gap-2"
+                    >
                       {item}
                       <span className="text-[#FFD100] font-black mx-2">·</span>
                     </span>
@@ -283,19 +353,37 @@ export default function Hero() {
         <div className="bg-[#fffbea] border-y border-amber-100">
           <div className="max-w-[1280px] mx-auto px-5 sm:px-8 py-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
-              { icon: "🏪", title: "First Physical Store", desc: "Rawalpindi's first dedicated cash & carry — a new standard for wholesale shopping in Pakistan." },
-              { icon: "💰", title: "Wholesale Prices", desc: "Direct from suppliers. No middlemen. You save more whether you buy one or one hundred." },
-              { icon: "🤝", title: "Trusted Since Day One", desc: "A proud project of Ashraf & Sons Traders — built on decades of business integrity." },
+              {
+                icon: "🏪",
+                title: "First Physical Store",
+                desc: "Rawalpindi's dedicated cash & carry — a new standard for wholesale shopping in Pakistan.",
+              },
+              {
+                icon: "💰",
+                title: "Wholesale Prices",
+                desc: "Direct from suppliers. No middlemen. You save more whether you buy one or one hundred.",
+              },
+              {
+                icon: "🤝",
+                title: "Trusted Since Day One",
+                desc: "A proud project of Ashraf & Sons Traders — built on decades of business integrity.",
+              },
             ].map((f, i) => (
               <div
                 key={i}
                 className="flex gap-4 items-start p-5 bg-white rounded-2xl border border-amber-100 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
-                style={{animation: `fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) ${0.1 + i * 0.15}s both`}}
+                style={{
+                  animation: `fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) ${0.1 + i * 0.15}s both`,
+                }}
               >
                 <div className="text-3xl shrink-0 mt-0.5">{f.icon}</div>
                 <div>
-                  <div className="text-[15px] font-bold text-gray-900 mb-1">{f.title}</div>
-                  <div className="text-[13px] text-gray-500 leading-relaxed">{f.desc}</div>
+                  <div className="text-[15px] font-bold text-gray-900 mb-1">
+                    {f.title}
+                  </div>
+                  <div className="text-[13px] text-gray-500 leading-relaxed">
+                    {f.desc}
+                  </div>
                 </div>
               </div>
             ))}
@@ -305,19 +393,50 @@ export default function Hero() {
         <div className="bg-white">
           <div className="max-w-[1280px] mx-auto px-5 sm:px-8 py-14 sm:py-20">
             <div className="text-center mb-10">
-              <div className="text-[11px] uppercase tracking-[3px] text-[#E8001C] font-bold mb-2">Store in Action</div>
-              <h2 className="vm-display text-3xl sm:text-4xl font-extrabold text-gray-900">See ValueMax in Action</h2>
-              <p className="text-gray-400 text-sm mt-2 max-w-md mx-auto">Take a virtual tour of Rawalpindi's most modern cash & carry experience</p>
+              <div className="text-[11px] uppercase tracking-[3px] text-[#E8001C] font-bold mb-2">
+                Store in Action
+              </div>
+              <h2 className="vm-display text-3xl sm:text-4xl font-extrabold text-gray-900">
+                See ValueMax in Action
+              </h2>
+              <p className="text-gray-400 text-sm mt-2 max-w-md mx-auto">
+                Take a virtual tour of Rawalpindi's most modern cash & carry
+                experience
+              </p>
             </div>
 
-            <div className="vm-video-wrapper relative w-full max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-100" style={{aspectRatio: "16/9"}}>
+            <div
+              className="vm-video-wrapper relative w-full max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-100"
+              style={{ aspectRatio: "16/9" }}
+            >
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-gray-50 text-gray-300 z-0">
-                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="2" width="20" height="20" rx="4"/>
-                  <polygon points="10,8 16,12 10,16" fill="currentColor" stroke="none"/>
+                <svg
+                  width="64"
+                  height="64"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="4" />
+                  <polygon
+                    points="10,8 16,12 10,16"
+                    fill="currentColor"
+                    stroke="none"
+                  />
                 </svg>
-                <p className="text-sm font-medium text-gray-400">Store Tour — Full View</p>
-                <p className="text-xs text-gray-300">Replace <code className="bg-gray-200 px-1 rounded text-gray-500">src</code> with your video URL or local file path</p>
+                <p className="text-sm font-medium text-gray-400">
+                  Store Tour — Full View
+                </p>
+                <p className="text-xs text-gray-300">
+                  Replace{" "}
+                  <code className="bg-gray-200 px-1 rounded text-gray-500">
+                    src
+                  </code>{" "}
+                  with your video URL or local file path
+                </p>
               </div>
               <video
                 className="relative z-10 w-full h-full object-cover"
@@ -330,16 +449,22 @@ export default function Hero() {
               <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/40 to-transparent z-20 flex items-end px-6 py-4">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#b60a01] animate-pulse" />
-                  <span className="text-white text-xs font-semibold tracking-wide uppercase">Live Store — Rawalpindi</span>
+                  <span className="text-white text-xs font-semibold tracking-wide uppercase">
+                    Live Store — Rawalpindi
+                  </span>
                 </div>
-                <div className="ml-auto text-[#FFD100] text-xs font-bold tracking-wide">ValueMax Cash &amp; Carry</div>
+                <div className="ml-auto text-[#FFD100] text-xs font-bold tracking-wide">
+                  ValueMax Cash &amp; Carry
+                </div>
               </div>
             </div>
 
             <p className="text-center text-[12px] text-gray-400 mt-5 font-medium">
               A project of{" "}
-              <span className="text-gray-600 font-semibold">Ashraf &amp; Sons Traders</span>
-              {" "}· Pakistan's First Cash &amp; Carry
+              <span className="text-gray-600 font-semibold">
+                Ashraf &amp; Sons Traders
+              </span>{" "}
+              · Pakistan's  Cash &amp; Carry
             </p>
           </div>
         </div>
