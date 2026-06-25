@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Search, Menu as LucideMenu, X as LucideX, Tag } from 'lucide-react'
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { CATEGORIES } from "../landing/Categories";
 
 const NAV_LINKS = [
@@ -23,6 +23,8 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeIndex, setActiveIndex] = useState(-1);
   const router = useRouter();
+  const pathname = usePathname();
+  const isActive = (link) => link.path === pathname;
 
   const matched = searchQuery.trim()
     ? CATEGORIES.filter(c =>
@@ -212,7 +214,7 @@ export default function Navbar() {
                 key={link.path}
                 href={link.path}
                 className={`relative no-underline text-[13.5px] font-medium px-3.5 py-1.5 rounded-lg transition-colors duration-150 whitespace-nowrap group
-                  ${link.label === "Home" ? "text-[#E8001C] font-semibold" : "text-gray-600 hover:text-[#E8001C] hover:bg-red-50"}`}
+                  ${isActive(link) ? "text-[#E8001C] font-semibold" : "text-gray-600 hover:text-[#E8001C] hover:bg-red-50"}`}
               >
                 {link.label}
                 {link.label === "Deals" && (
@@ -220,7 +222,7 @@ export default function Navbar() {
                     HOT
                   </span>
                 )}
-                <span className={`absolute bottom-0.5 left-3.5 right-3.5 h-0.5 bg-[#FFD100] rounded-sm origin-left transition-transform duration-200 ${link.label === "Home" ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`} />
+                <span className={`absolute bottom-0.5 left-3.5 right-3.5 h-0.5 bg-[#FFD100] rounded-sm origin-left transition-transform duration-200 ${isActive(link) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`} />
               </Link>
             ))}
           </div>
@@ -298,7 +300,7 @@ export default function Navbar() {
                 href={link.path}
                 onClick={() => { setMenuOpen(false); }}
                 className={`relative no-underline text-sm font-medium px-3.5 py-2.5 rounded-lg w-full transition-colors duration-150
-                  ${link.label === "Home" ? "text-[#E8001C] font-semibold bg-red-50" : "text-gray-700 hover:text-[#E8001C] hover:bg-red-50"}`}
+                  ${isActive(link) ? "text-[#E8001C] font-semibold bg-red-50" : "text-gray-700 hover:text-[#E8001C] hover:bg-red-50"}`}
               >
                 {link.label}
                 {link.label === "Deals" && (
