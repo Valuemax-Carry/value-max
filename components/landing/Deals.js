@@ -509,7 +509,7 @@ export default function Deals() {
                   {[
                     "Make any purchase at Cash & Carry to get an entry ticket.",
                     "More you spend, more entries you earn — Rs. 1,000 = 1 entry.",
-                    "Draw is live on 15 July 2026 at our Rawalpindi store.",
+                    "Draw is live on 18 July 2026 at our Rawalpindi store.",
                   ].map((step, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <span className="shrink-0 w-6 h-6 rounded-full bg-[#FFD100] text-[#7a0600] text-[11px] font-extrabold flex items-center justify-center mt-0.5">{i+1}</span>
