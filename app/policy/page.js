@@ -162,8 +162,8 @@ export default function PolicyPage() {
 
             <p className="text-[13px] text-gray-400 font-medium tracking-wide policy-fade-3">
               A project of{" "}
-              <span className="text-gray-700 font-semibold">Ashraf &amp; Sons Traders</span>
-              &nbsp;· Cash &amp; Carry, Rawalpindi
+              <span className="text-gray-700 font-semibold">ASHRAF &amp; SONS TRADERS</span>
+              &nbsp;· (SMC-PVT) LTD.
             </p>
           </div>
 
