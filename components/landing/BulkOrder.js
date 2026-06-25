@@ -15,7 +15,7 @@ export default function BulkOrder() {
   const [done, setDone] = useState(false);
 
   const WHATSAPP = "03085518210";
-  const EMAIL = "isaamir81@gmail.com";
+  const EMAIL = "valuemaxcc@gmail.com";
 
   const handleChange = (e) =>
     setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
@@ -798,11 +798,11 @@ export default function BulkOrder() {
                   <span>
                     A project of{" "}
                     <strong style={{ color: "#555" }}>
-                      Ashraf &amp; Sons Traders
+                    ASHRAF & SONS TRADERS
                     </strong>
                   </span>
                   <span className="bo-trust-dot" />
-                  <span>Cash &amp; Carry</span>
+                  <span>(SMC-PVT) LTD.</span>
                 </div>
               </form>
             </div>

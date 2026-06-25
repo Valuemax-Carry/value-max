@@ -217,9 +217,9 @@ export default function Hero() {
               <p className="text-[13px] text-gray-400 font-medium tracking-wide mb-6 vm-fade-up-3">
                 A project of{" "}
                 <span className="text-gray-700 font-semibold">
-                  Ashraf &amp; Sons Traders
+                  ASHRAF & SONS TRADERS
                 </span>
-                &nbsp; Cash & Carry
+                &nbsp; (SMC-PVT) LTD.
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8 vm-fade-up-4">
@@ -462,10 +462,10 @@ export default function Hero() {
             <p className="text-center text-[12px] text-gray-400 mt-5 font-medium">
               A project of{" "}
               <span className="text-gray-600 font-semibold">
-                Ashraf &amp; Sons Traders
+             ASHRAF & SONS TRADERS
               </span>{" "}
-              · Pakistan's  Cash &amp; Carry
-            </p>
+              (SMC-PVT) LTD.            
+              </p>
           </div>
         </div>
       </section>

@@ -305,8 +305,8 @@ export default function PolicyPage() {
 
         <p className="text-center text-[12px] text-gray-400 mt-8 font-medium">
           A project of{" "}
-          <span className="text-gray-600 font-semibold">Ashraf &amp; Sons Traders</span>
-          {" "}&middot; Pakistan&apos;s Trusted Cash &amp; Carry
+          <span className="text-gray-600 font-semibold">ASHRAF &amp; SONS TRADERS</span>
+          {" "}&middot; (SMC-PVT) LTD.
         </p>
       </div>
     </div>
