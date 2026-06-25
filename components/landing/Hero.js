@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import Link from "next/link";
 
 const STATS = [
   { value: "10,000+", label: "Products" },
@@ -223,9 +224,11 @@ export default function Hero() {
               </p>
 
               <div className="flex flex-wrap gap-3 mb-8 vm-fade-up-4">
+                <Link href={"#categories"}>
                 <button className="vm-cta-primary vm-btn-hover bg-[#b60a01] hover:bg-[#c0001a] text-white font-bold text-sm px-7 py-3.5 rounded-xl border-none cursor-pointer">
                   Shop Now →
                 </button>
+                </Link>
                 <button className="vm-outline-hover border-2 border-gray-200 text-gray-800 font-semibold text-sm px-7 py-3.5 rounded-xl bg-transparent cursor-pointer">
                   View Deals
                 </button>
