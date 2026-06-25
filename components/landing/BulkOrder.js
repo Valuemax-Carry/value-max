@@ -1,31 +1,59 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 
 export default function BulkOrder() {
-  const [form, setForm] = useState({ name: "", company: "", email: "", phone: "", product: "", quantity: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    product: "",
+    quantity: "",
+    message: "",
+  });
   const [done, setDone] = useState(false);
 
   const WHATSAPP = "03085518210";
   const EMAIL = "isaamir81@gmail.com";
 
-  const handleChange = (e) => setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
+  const handleChange = (e) =>
+    setForm((s) => ({ ...s, [e.target.name]: e.target.value }));
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const body = `Bulk order request%0AName: ${encodeURIComponent(form.name)}%0ACompany: ${encodeURIComponent(form.company)}%0AEmail: ${encodeURIComponent(form.email)}%0APhone: ${encodeURIComponent(form.phone)}%0AProduct: ${encodeURIComponent(form.product)}%0AQuantity: ${encodeURIComponent(form.quantity)}%0AMessage: ${encodeURIComponent(form.message)}`;
     window.open(`https://wa.me/${WHATSAPP}?text=${body}`, "_blank");
     setDone(true);
-    setForm({ name: "", company: "", email: "", phone: "", product: "", quantity: "", message: "" });
+    setForm({
+      name: "",
+      company: "",
+      email: "",
+      phone: "",
+      product: "",
+      quantity: "",
+      message: "",
+    });
     setTimeout(() => setDone(false), 4000);
   };
 
   const perks = [
     {
       icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
         </svg>
       ),
       title: "Dedicated Support",
@@ -33,8 +61,18 @@ export default function BulkOrder() {
     },
     {
       icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <line x1="12" y1="1" x2="12" y2="23" />
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
         </svg>
       ),
       title: "Wholesale Pricing",
@@ -42,8 +80,20 @@ export default function BulkOrder() {
     },
     {
       icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <rect x="1" y="3" width="15" height="13" rx="2" />
+          <path d="M16 8h4l3 3v5h-7V8z" />
+          <circle cx="5.5" cy="18.5" r="2.5" />
+          <circle cx="18.5" cy="18.5" r="2.5" />
         </svg>
       ),
       title: "Nationwide Delivery",
@@ -51,8 +101,18 @@ export default function BulkOrder() {
     },
     {
       icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <polyline points="12 6 12 12 16 14" />
         </svg>
       ),
       title: "24-Hour Response",
@@ -60,8 +120,17 @@ export default function BulkOrder() {
     },
     {
       icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
         </svg>
       ),
       title: "Trusted Partner",
@@ -69,8 +138,18 @@ export default function BulkOrder() {
     },
     {
       icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <polyline points="9 11 12 14 22 4" />
+          <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
         </svg>
       ),
       title: "10,000+ Products",
@@ -79,12 +158,49 @@ export default function BulkOrder() {
   ];
 
   const fields = [
-    { name: "name", label: "Your name", placeholder: "Ali Hassan", required: true, type: "text", half: true },
-    { name: "company", label: "Company / Business", placeholder: "Business name", type: "text", half: true },
-    { name: "email", label: "Email address", placeholder: "you@company.com", type: "email", half: true },
-    { name: "phone", label: "Phone number", placeholder: "03xx-xxxxxxx", type: "tel", half: true },
-    { name: "product", label: "Product name / SKU", placeholder: "e.g. Nestle Milk 1L, Rice 25kg", type: "text", half: false },
-    { name: "quantity", label: "Estimated quantity", placeholder: "e.g. 500 units / 20 cartons", type: "text", half: false },
+    {
+      name: "name",
+      label: "Your name",
+      placeholder: "Ali Hassan",
+      required: true,
+      type: "text",
+      half: true,
+    },
+    {
+      name: "company",
+      label: "Company / Business",
+      placeholder: "Business name",
+      type: "text",
+      half: true,
+    },
+    {
+      name: "email",
+      label: "Email address",
+      placeholder: "you@company.com",
+      type: "email",
+      half: true,
+    },
+    {
+      name: "phone",
+      label: "Phone number",
+      placeholder: "03xx-xxxxxxx",
+      type: "tel",
+      half: true,
+    },
+    {
+      name: "product",
+      label: "Product name / SKU",
+      placeholder: "e.g. Nestle Milk 1L, Rice 25kg",
+      type: "text",
+      half: false,
+    },
+    {
+      name: "quantity",
+      label: "Estimated quantity",
+      placeholder: "e.g. 500 units / 20 cartons",
+      type: "text",
+      half: false,
+    },
   ];
 
   return (
@@ -533,13 +649,16 @@ export default function BulkOrder() {
           <div className="bo-card">
             <div className="bo-left">
               <h2 className="bo-title bo-display">
-                Bulk Orders &{" "}
-                <span className="bo-title-accent">Wholesale</span>
-                <br />Pricing
+                Bulk Orders & <span className="bo-title-accent">Wholesale</span>
+                <br />
+                Pricing
               </h2>
 
               <p className="bo-desc">
-                We welcome bulk purchases for businesses, institutions and large households. Competitive pricing, dedicated account support and fast dispatch across Pakistan.
+                Stock up on fresh groceries and everyday essentials with our
+                bulk ordering service. We offer competitive prices, dependable
+                supply, and fast delivery for businesses, restaurants,
+                institutions, and large households across Pakistan.{" "}
               </p>
 
               <div className="bo-perks-grid">
@@ -557,17 +676,39 @@ export default function BulkOrder() {
               <div className="bo-divider" />
               <p className="bo-contact-label">Reach us directly</p>
               <div className="bo-btns">
-                <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noreferrer" className="bo-btn-wa">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.112 1.523 5.844L.057 23.886a.5.5 0 0 0 .61.61l6.042-1.466A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.012-1.374l-.358-.213-3.724.903.92-3.635-.234-.374A9.818 9.818 0 1 1 12 21.818z"/>
+                <a
+                  href={`https://wa.me/${WHATSAPP}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bo-btn-wa"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.112 1.523 5.844L.057 23.886a.5.5 0 0 0 .61.61l6.042-1.466A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.012-1.374l-.358-.213-3.724.903.92-3.635-.234-.374A9.818 9.818 0 1 1 12 21.818z" />
                   </svg>
                   WhatsApp
                 </a>
-                <a href={`mailto:${EMAIL}?subject=Bulk%20Order%20Inquiry`} className="bo-btn-email">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                    <polyline points="22,6 12,13 2,6"/>
+                <a
+                  href={`mailto:${EMAIL}?subject=Bulk%20Order%20Inquiry`}
+                  className="bo-btn-email"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
                   </svg>
                   Email Us
                 </a>
@@ -577,13 +718,21 @@ export default function BulkOrder() {
             <div className="bo-form-wrap">
               <span className="bo-form-badge">✦ Get a Quote</span>
               <p className="bo-form-title">Request a Bulk Quote</p>
-              <p className="bo-form-sub">Fill in your details and we'll get back to you within 24 hours.</p>
+              <p className="bo-form-sub">
+                Fill in your details and we'll get back to you within 24 hours.
+              </p>
 
               <form onSubmit={handleSubmit}>
                 <div className="bo-fields-grid">
                   {fields.map((f) => (
-                    <div key={f.name} className={`bo-field${f.half ? "" : " bo-field-full"}`}>
-                      <label className="bo-label">{f.label}{f.required ? " *" : ""}</label>
+                    <div
+                      key={f.name}
+                      className={`bo-field${f.half ? "" : " bo-field-full"}`}
+                    >
+                      <label className="bo-label">
+                        {f.label}
+                        {f.required ? " *" : ""}
+                      </label>
                       <input
                         name={f.name}
                         value={form[f.name]}
@@ -610,16 +759,35 @@ export default function BulkOrder() {
                 </div>
 
                 <button type="submit" className="bo-submit">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <line x1="22" y1="2" x2="11" y2="13" />
+                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
                   </svg>
                   Request Bulk Quote
                 </button>
 
                 {done && (
                   <div className="bo-success">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a6e40" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12"/>
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#1a6e40"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="20 6 9 17 4 12" />
                     </svg>
                     Thanks — we'll get back to you shortly.
                   </div>
@@ -627,7 +795,12 @@ export default function BulkOrder() {
 
                 <div className="bo-trust-strip">
                   <span className="bo-trust-dot" />
-                  <span>A project of <strong style={{ color: "#555" }}>Ashraf &amp; Sons Traders</strong></span>
+                  <span>
+                    A project of{" "}
+                    <strong style={{ color: "#555" }}>
+                      Ashraf &amp; Sons Traders
+                    </strong>
+                  </span>
                   <span className="bo-trust-dot" />
                   <span>Pakistan's First Cash &amp; Carry</span>
                 </div>
