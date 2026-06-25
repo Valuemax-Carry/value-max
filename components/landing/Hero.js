@@ -206,7 +206,7 @@ export default function Hero() {
                 </span>
               </h1>
               <h1 className="vm-display text-[2rem] xs:text-[2.2rem] sm:text-[3.2rem] lg:text-[3.8rem] leading-[1.08] font-extrabold text-gray-900 mb-4 vm-fade-up-2">
-                Cash &amp; Carry Store
+                Cash <span className="font-sans">&amp;</span> Carry Store
               </h1>
 
               <p className="text-gray-500 text-sm sm:text-lg leading-relaxed max-w-[480px] mb-3 vm-fade-up-3">

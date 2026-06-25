@@ -15,47 +15,48 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: "ValueMax Cash & Carry | Pakistan's First Cash & Carry Store — Lahore",
+    default: "ValueMax Cash & Carry | Pakistan's Cash & Carry Store — Rawalpindi",
     template: "%s | ValueMax Cash & Carry",
   },
   description:
-    "ValueMax Cash & Carry is Pakistan's first physical cash & carry store in Lahore. Shop 10,000+ products at wholesale prices. A project of Ashraf & Sons Traders. Free delivery on orders above Rs. 5,000.",
+    "ValueMax Cash & Carry is Pakistan's physical cash & carry store in Rawalpindi. Shop 10,000+ products at wholesale prices. A project of Ashraf & Sons Traders. Free delivery on orders above Rs. 5,000.",
   keywords: [
     "ValueMax Cash and Carry",
     "cash and carry Pakistan",
-    "wholesale store Lahore",
-    "bulk shopping Lahore",
+    "wholesale store Rawalpindi",
+    "bulk shopping Rawalpindi",
     "Ashraf and Sons Traders",
     "wholesale prices Pakistan",
-    "grocery wholesale Lahore",
-    "cash carry Lahore",
+    "grocery wholesale Rawalpindi",
+    "cash carry Rawalpindi",
     "ValueMax store",
     "Pakistan wholesale market",
-    "superstore Lahore",
-    "grocery store Lahore",
+    "superstore Rawalpindi",
+    "grocery store Rawalpindi",
     "retail wholesale Pakistan",
-    "daily essentials Lahore",
-    "cheap grocery Lahore",
+    "daily essentials Rawalpindi",
+    "cheap grocery Rawalpindi",
+    "Chak Beli Khan store",
   ],
   authors: [{ name: "Ashraf & Sons Traders" }],
   creator: "Ashraf & Sons Traders",
   publisher: "ValueMax Cash & Carry",
-  metadataBase: new URL("https://valuemaxstore.pk"),
+  metadataBase: new URL("https://valuemax.com.pk"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "ValueMax Cash & Carry | Pakistan's First Cash & Carry Store",
+    title: "ValueMax Cash & Carry | Pakistan's Cash & Carry Store",
     description:
-      "Shop 10,000+ products at wholesale prices. Lahore's first dedicated cash & carry — a project of Ashraf & Sons Traders.",
-    url: "https://valuemaxstore.pk",
+      "Shop 10,000+ products at wholesale prices. Rawalpindi's dedicated cash & carry — a project of Ashraf & Sons Traders.",
+    url: "https://valuemax.com.pk",
     siteName: "ValueMax Cash & Carry",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "ValueMax Cash & Carry — Pakistan's First Cash & Carry Store in Lahore",
+        alt: "ValueMax Cash & Carry — Pakistan's Cash & Carry Store in Rawalpindi",
       },
     ],
     locale: "en_PK",
@@ -63,9 +64,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ValueMax Cash & Carry | Pakistan's First Cash & Carry Store",
+    title: "ValueMax Cash & Carry | Pakistan's Cash & Carry Store",
     description:
-      "Shop 10,000+ products at wholesale prices in Lahore. A project of Ashraf & Sons Traders.",
+      "Shop 10,000+ products at wholesale prices in Rawalpindi. A project of Ashraf & Sons Traders.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -104,9 +105,9 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#E8001C" />
         <meta name="geo.region" content="PK-PB" />
-        <meta name="geo.placename" content="Lahore, Punjab, Pakistan" />
-        <meta name="geo.position" content="31.5204;74.3587" />
-        <meta name="ICBM" content="31.5204, 74.3587" />
+        <meta name="geo.placename" content="Rawalpindi, Punjab, Pakistan" />
+        <meta name="geo.position" content="33.2370092;72.9091385" />
+        <meta name="ICBM" content="33.2370092, 72.9091385" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -115,10 +116,10 @@ export default function RootLayout({ children }) {
               "@type": "Store",
               name: "ValueMax Cash & Carry",
               description:
-                "Pakistan's first physical cash & carry store offering wholesale prices on 10,000+ products in Lahore.",
-              url: "https://valuemaxstore.pk",
-              logo: "https://valuemaxstore.pk/logo.png",
-              image: "https://valuemaxstore.pk/og-image.jpg",
+                "Pakistan's physical cash & carry store offering wholesale prices on 10,000+ products in Rawalpindi.",
+              url: "https://valuemax.com.pk",
+              logo: "https://valuemax.com.pk/logo.png",
+              image: "https://valuemax.com.pk/og-image.jpg",
               telephone: "+92-42-111-826-826",
               address: {
                 "@type": "PostalAddress",
@@ -130,8 +131,8 @@ export default function RootLayout({ children }) {
               },
               geo: {
                 "@type": "GeoCoordinates",
-                latitude: 31.5204,
-                longitude: 74.3587,
+                latitude: 33.2370092,
+                longitude: 72.9091385,
               },
               founder: {
                 "@type": "Organization",
@@ -150,11 +151,11 @@ export default function RootLayout({ children }) {
                 {
                   "@type": "OpeningHoursSpecification",
                   dayOfWeek: "Sunday",
-                  opens: "10:00",
-                  closes: "20:00",
+                  opens: "09:00",
+                  closes: "22:00",
                 },
               ],
-              hasMap: "https://maps.google.com/?q=ValueMax+Cash+Carry+Lahore",
+              hasMap: "https://www.google.com/maps/place/Chak+beli+bazar/@33.2370092,71.755574,9z/data=!4m7!3m6!1s0x392077ba00684321:0x425a0d26eeccc5bc!8m2!3d33.2370092!4d72.9091385!15sCiVNYWluIEJhemFyLCBDaGFrIEJlbGkgS2hhbiBSYXdhbHBpbmRpkgEGbWFya2V04AEA!16s%2Fg%2F11lc9z4z8m",
               sameAs: [
                 "https://instagram.com/cashandcarry.pk",
               ],
