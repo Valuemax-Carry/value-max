@@ -13,7 +13,7 @@ export const CATEGORIES = [
   { id: 3, slug: "snacks", title: "Snacks", image: "/ProdcutsBanner/6.png" },
   { id: 4, slug: "tea-coffee", title: "Tea & Coffee", image: "/ProdcutsBanner/7.png" },
   { id: 5, slug: "dairy", title: "Dairy Products", image: "/ProdcutsBanner/8.png" },
-  { id: 6, slug: "pluses", title: "Pluses", image: "/ProdcutsBanner/9.png" },
+  { id: 6, slug: "pulses", title: "Pulses", image: "/ProdcutsBanner/9.png" },
   { id: 7, slug: "Rice", title: "Rice", image: "/ProdcutsBanner/10.png" },
   { id: 8, slug: "oil-ghee", title: "Oil & Ghee", image: "/ProdcutsBanner/11.png" },
   { id: 9, slug: "flour", title: "Flour", image: "/ProdcutsBanner/12.png" },

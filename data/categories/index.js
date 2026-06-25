@@ -2,7 +2,7 @@ import drinksBeverages from './drinks-beverages';
 import snacks from './snacks';
 import teaCoffee from './tea-coffee';
 import dairy from './dairy';
-import pluses from './pluses';
+import pulses from './pulses';
 import Rice from './Rice';
 import oilGhee from './oil-ghee';
 import flour from './flour';
@@ -16,7 +16,7 @@ const MAP = {
   'snacks': snacks,
   'tea-coffee': teaCoffee,
   'dairy': dairy,
-  'pluses': pluses,
+  'pulses': pulses,
   'Rice': Rice,
   'oil-ghee': oilGhee,
   'flour': flour,
