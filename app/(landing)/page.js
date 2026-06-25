@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <>
     <Hero />
-    <WhatsaapIcon />
     <Categories />
     <Deals />
     <BulkOrder />
