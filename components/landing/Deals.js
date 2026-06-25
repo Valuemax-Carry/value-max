@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image';
 
 const LOYALTY_PERKS = [
   {
@@ -379,7 +380,7 @@ export default function Deals() {
                     <div className="relative z-10">
                       <div className="flex items-start justify-between mb-8">
                         <div>
-                          <p className="text-white/50 text-[10px] uppercase tracking-widest font-semibold">Cash & Carry</p>
+                          <p className="text-white/50 text-[10px] uppercase tracking-widest font-semibold">ValueMax Cash & Carry</p>
                           <p className="text-[#FFD100] font-extrabold text-sm tracking-wider">LOYALTY CARD</p>
                         </div>
                         <div className="w-10 h-10 rounded-full bg-[#FFD100]/20 border border-[#FFD100]/40 flex items-center justify-center">
@@ -444,23 +445,17 @@ export default function Deals() {
               <div className="flex-shrink-0 w-full max-w-[420px] mx-auto lg:mx-0">
                 <div className="relative rounded-3xl overflow-hidden border-2 border-[#FFD100]/30 bg-white/5 backdrop-blur-sm p-8 flex flex-col items-center">
                   <div className="bike-float mb-4">
-                    <svg viewBox="0 0 240 140" width="240" height="140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="55" cy="100" r="32" stroke="#FFD100" strokeWidth="7" fill="none"/>
-                      <circle cx="55" cy="100" r="10" fill="#FFD100"/>
-                      <circle cx="185" cy="100" r="32" stroke="#FFD100" strokeWidth="7" fill="none"/>
-                      <circle cx="185" cy="100" r="10" fill="#FFD100"/>
-                      <path d="M55 100 L90 55 L145 50 L185 100" stroke="white" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-                      <path d="M90 55 L105 100" stroke="white" strokeWidth="5" strokeLinecap="round"/>
-                      <path d="M145 50 L160 35 L185 38" stroke="white" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M140 50 L155 65 L185 65" stroke="white" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      <rect x="72" y="48" width="36" height="20" rx="5" fill="#b60a01" stroke="#FFD100" strokeWidth="2"/>
-                      <path d="M80 48 L88 35 L100 35 L108 48" stroke="#FFD100" strokeWidth="2.5" fill="none" strokeLinejoin="round"/>
-                    </svg>
+                    <Image
+                    src={"/BlogBanner/bike.png"}
+                    alt='Bike'
+                    width={180}
+                    height={180}
+                    />
                   </div>
                   <div className="text-center">
                     <p className="text-white/50 text-[10px] uppercase tracking-[3px] font-semibold mb-1">Prize</p>
                     <p className="text-[#FFD100] font-extrabold text-lg leading-snug vm-display">Brand New Motorcycle</p>
-                    <p className="text-white/40 text-xs mt-1">Honda CD 70 — Worth Rs. 185,000</p>
+                    <p className="text-white/40 text-xs mt-1">United CD 70 — Worth Rs. 120,000</p>
                   </div>
                   <div className="mt-6 w-full border-t border-white/10 pt-5 flex items-center justify-between">
                     <div className="text-center">
