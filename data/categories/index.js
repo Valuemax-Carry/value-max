@@ -30,6 +30,8 @@ const NORMALIZED_MAP = Object.fromEntries(
   Object.entries(MAP).map(([key, value]) => [String(key).toLowerCase(), value])
 );
 
+export const CATEGORY_SLUGS = Object.keys(MAP).map((slug) => String(slug).toLowerCase());
+
 export function getProductsBySlug(slug) {
   if (!slug) return [];
   const key = String(slug).toLowerCase();
