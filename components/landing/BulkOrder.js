@@ -802,7 +802,7 @@ export default function BulkOrder() {
                     </strong>
                   </span>
                   <span className="bo-trust-dot" />
-                  <span>Pakistan's First Cash &amp; Carry</span>
+                  <span>Cash &amp; Carry</span>
                 </div>
               </form>
             </div>
