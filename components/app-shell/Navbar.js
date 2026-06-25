@@ -19,6 +19,7 @@ const NAV_LINKS = [
   { label: "Categories", path: "#categories" },
   { label: "Deals", path: "#deals" },
   { label: "Bulk Orders", path: "#bulk-order" },
+   { label: "Policy", path: "/policy" },
   { label: "Contact", path: "#contact" },
 ];
 
