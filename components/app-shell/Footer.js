@@ -2,11 +2,12 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { Phone, Mail, MapPin, MessageCircle, Clock, ChevronRight, Star, PhoneCall } from 'lucide-react'
+import { Phone, Mail, MapPin, MessageCircle, Clock, ChevronRight, Star } from 'lucide-react'
 
 const WHATSAPP_NUMBER = "03085518210"
 const EMAIL = "valuemaxcc@gmail.com"
 const INSTAGRAM = "https://instagram.com/valuemax_cashandcarry"
+const FACEBOOK = "https://www.facebook.com/ValueMaxCashandCarry?mibextid=wwXIfr&mibextid=wwXIfr"
 const MAPS_LINK = "https://maps.app.goo.gl/2FuBRsf7LCJKKZ1C8"
 const LOCATION = "Islam Plaza, Main Bazar, Chak Beli Khan, Postal Code 47600, Tehsil & District Rawalpindi"
 const PHONE = "+051-4947279"
@@ -230,9 +231,21 @@ export default function Footer() {
                   aria-label="Instagram"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="3" y="3" width="18" height="18" rx="5" stroke="white" strokeWidth="1.2" />
-                    <circle cx="12" cy="11" r="3" fill="white" />
-                    <circle cx="17" cy="7" r="0.9" fill="white" />
+                    <rect x="2" y="2" width="20" height="20" rx="5.5" stroke="white" strokeWidth="1.8" fill="none"/>
+                    <circle cx="12" cy="12" r="4.5" stroke="white" strokeWidth="1.8" fill="none"/>
+                    <circle cx="17.5" cy="6.5" r="1.1" fill="white"/>
+                  </svg>
+                </a>
+                <a
+                  href={FACEBOOK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ft-social-btn"
+                  style={{background:'#1877F2'}}
+                  aria-label="Facebook"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
                   </svg>
                 </a>
                 <a
@@ -323,7 +336,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <p className="text-white/35 text-[10px] uppercase tracking-widest font-semibold mb-0.5">WhatsApp</p>
-                    <p className="text-white/80 text-sm font-semibold">{PHONE}</p>
+                    <p className="text-white/80 text-sm font-semibold">{WHATSAPP_NUMBER}</p>
                   </div>
                 </a>
 
@@ -339,11 +352,27 @@ export default function Footer() {
 
                 <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="ft-contact-row group" style={{textDecoration:'none'}}>
                   <div className="ft-icon-wrap">
-                    <PhoneCall size={15} color="#f09433" />
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="2" y="2" width="20" height="20" rx="5.5" stroke="#f09433" strokeWidth="1.8" fill="none"/>
+                      <circle cx="12" cy="12" r="4.5" stroke="#f09433" strokeWidth="1.8" fill="none"/>
+                      <circle cx="17.5" cy="6.5" r="1.1" fill="#f09433"/>
+                    </svg>
                   </div>
                   <div>
                     <p className="text-white/35 text-[10px] uppercase tracking-widest font-semibold mb-0.5">Instagram</p>
                     <p className="text-white/80 text-sm font-semibold">valuemax_cashandcarry</p>
+                  </div>
+                </a>
+
+                <a href={FACEBOOK} target="_blank" rel="noopener noreferrer" className="ft-contact-row group" style={{textDecoration:'none'}}>
+                  <div className="ft-icon-wrap">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="#1877F2" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-white/35 text-[10px] uppercase tracking-widest font-semibold mb-0.5">Facebook</p>
+                    <p className="text-white/80 text-sm font-semibold">ValueMaxCashandCarry</p>
                   </div>
                 </a>
 
