@@ -343,7 +343,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <p className="text-white/35 text-[10px] uppercase tracking-widest font-semibold mb-0.5">Instagram</p>
-                    <p className="text-white/80 text-sm font-semibold">@cashandcarry.pk</p>
+                    <p className="text-white/80 text-sm font-semibold">valuemax_cashandcarry</p>
                   </div>
                 </a>
 
