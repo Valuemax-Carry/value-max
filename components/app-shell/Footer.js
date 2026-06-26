@@ -6,10 +6,10 @@ import { Phone, Mail, MapPin, MessageCircle, Clock, ChevronRight, Star, PhoneCal
 
 const WHATSAPP_NUMBER = "03085518210"
 const EMAIL = "valuemaxcc@gmail.com"
-const INSTAGRAM = "https://instagram.com/cashandcarry.pk"
+const INSTAGRAM = "https://instagram.com/valuemax_cashandcarry"
 const MAPS_LINK = "https://maps.app.goo.gl/2FuBRsf7LCJKKZ1C8"
 const LOCATION = "Islam Plaza, Main Bazar, Chak Beli Khan, Postal Code 47600, Tehsil & District Rawalpindi"
-const PHONE = "+03085518210"
+const PHONE = "+051-4947279"
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
@@ -343,7 +343,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <p className="text-white/35 text-[10px] uppercase tracking-widest font-semibold mb-0.5">Instagram</p>
-                    <p className="text-white/80 text-sm font-semibold">@cashandcarry.pk</p>
+                    <p className="text-white/80 text-sm font-semibold">valuemax_cashandcarry</p>
                   </div>
                 </a>
 
