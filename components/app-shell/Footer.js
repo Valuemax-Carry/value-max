@@ -9,7 +9,7 @@ const EMAIL = "valuemaxcc@gmail.com"
 const INSTAGRAM = "https://instagram.com/cashandcarry.pk"
 const MAPS_LINK = "https://maps.app.goo.gl/2FuBRsf7LCJKKZ1C8"
 const LOCATION = "Islam Plaza, Main Bazar, Chak Beli Khan, Postal Code 47600, Tehsil & District Rawalpindi"
-const PHONE = "+03085518210"
+const PHONE = "+051-4947279"
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
