@@ -89,7 +89,7 @@ export default function Navbar() {
                 height={64}
               />
             </div>
-            <div className="leading-tight">
+            <div className="leading-tight flex gap-2 items-center">
               <div className="text-[23px] font-extrabold text-[#b60a01] tracking-tight">
                 Value<span className="text-[#ffbc0b]">Max</span>
               </div>
