@@ -359,7 +359,7 @@ export default function Hero() {
               {
                 icon: "🏪",
                 title: "First Physical Store",
-                desc: "Rawalpindi's dedicated cash & carry — a new standard for wholesale shopping in Pakistan.",
+                desc: "Rawalpindi's dedicated cash & carry — a new standard for wholesale and retail shopping in Pakistan.",
               },
               {
                 icon: "💰",
