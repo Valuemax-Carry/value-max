@@ -446,7 +446,7 @@ export default function Deals() {
                 <div className="relative rounded-3xl overflow-hidden border-2 border-[#FFD100]/30 bg-white/5 backdrop-blur-sm p-8 flex flex-col items-center">
                   <div className="bike-float mb-4">
                     <Image
-                    src={"/BlogBanner/bike.png"}
+                    src={"/BlogBanner/luckydraw.jpeg"}
                     alt='Bike'
                     width={180}
                     height={180}
