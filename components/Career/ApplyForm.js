@@ -62,16 +62,15 @@ export default function ApplyForm({ openForm, setOpenForm }) {
       `}</style>
 
       <div className="vm-apply vm-apply-panel bg-white">
-        <div className="px-5 sm:px-8 pb-20 max-w-5xl mx-auto">
-          <div className="text-center mb-8">
-            <div className="text-[11px] uppercase tracking-[3px] text-[#E8001C] font-bold mb-2">
-              Join Our Team
-            </div>
-            <h2 className="vm-apply-display text-2xl sm:text-3xl font-extrabold text-gray-900">
-              Apply Now
-            </h2>
+        <div className="text-center mb-8">
+          <div className="text-[11px] uppercase tracking-[3px] text-[#E8001C] font-bold mb-2">
+            Join Our Team
           </div>
-
+          <h2 className="vm-apply-display text-2xl sm:text-3xl font-extrabold text-gray-900">
+            Apply Now
+          </h2>
+        </div>
+        <div className="px-5 sm:px-8 pb-20 max-w-5xl">
           <form className="flex flex-col lg:flex-row lg:items-start gap-10">
             <div className="flex flex-col gap-5 w-full">
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
