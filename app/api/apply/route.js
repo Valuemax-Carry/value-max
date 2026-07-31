@@ -1,5 +1,6 @@
 import nodemailer from "nodemailer";
 
+const MAX_FILE_SIZE = 15 * 1024 * 1024; 
 export async function POST(req) {
   try {
     const formData = await req.formData();
@@ -21,6 +22,18 @@ export async function POST(req) {
         { success: false, error: "Missing required fields" },
         { status: 400 }
       );
+    }
+
+    if (file && typeof file === "object" && file.size > 0) {
+      if (file.size > MAX_FILE_SIZE) {
+        return Response.json(
+          {
+            success: false,
+            error: `File is too large. Max allowed size is ${MAX_FILE_SIZE / (1024 * 1024)}MB.`,
+          },
+          { status: 400 }
+        );
+      }
     }
 
     const transporter = nodemailer.createTransport({
