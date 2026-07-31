@@ -133,6 +133,7 @@ export default function ApplyForm({ openForm, setOpenForm }) {
           <div className="text-center mb-8">
             <div className="text-[11px] uppercase tracking-[3px] text-[#E8001C] font-bold mb-2">
               Join Our Team
+              <div className="w-[120px] mx-auto h-[2px] bg-[#FFD100]"></div>
             </div>
             <h2 className="vm-apply-display text-2xl sm:text-3xl font-extrabold text-gray-900">
               Apply Now
