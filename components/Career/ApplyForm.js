@@ -53,6 +53,9 @@ export default function ApplyForm({ openForm, setOpenForm }) {
       const result = await res.json();
       if (result.success) {
         setStatus("success");
+        setTimeout(()=>{
+          setStatus("");
+        },2000);
         setFormValues({
           firstName: "",
           lastName: "",
