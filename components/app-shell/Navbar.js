@@ -9,11 +9,11 @@ import { CATEGORIES } from "../landing/Categories";
 
 const NAV_LINKS = [
   { label: "Home", path: "/" },
-  { label: "Categories", path: "#categories" },
-  { label: "Deals", path: "#deals" },
-  { label: "Bulk Orders", path: "#bulk-order" },
+  { label: "Categories", path: "/#categories" },
+  { label: "Deals", path: "/#deals" },
+  { label: "Bulk Orders", path: "/#bulk-order" },
   { label: "Policy", path: "/policy" },
-  { label: "Contact", path: "#contact" },
+  { label: "Contact", path: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -169,7 +169,7 @@ export default function Navbar() {
 
             {/* Sign In — after search bar */}
             <button className="border-2 border-[#b60a01] text-[#E8001C] hover:bg-[#b60a01] hover:text-white hover:-translate-y-px bg-transparent text-[13px] font-semibold px-4 py-[7px] rounded-lg cursor-pointer transition-all duration-200 whitespace-nowrap shrink-0">
-              Sign In
+              Apply For Jobs
             </button>
           </div>
         </div>
@@ -312,7 +312,7 @@ export default function Navbar() {
             ))}
 
             <button className="mt-2 border-2 border-[#b60a01] text-[#E8001C] hover:bg-[#E8001C] hover:text-white bg-transparent text-sm font-semibold px-4 py-2 rounded-lg cursor-pointer transition-all duration-200">
-              Sign In
+            Apply For Jobs
             </button>
           </div>
         </div>
