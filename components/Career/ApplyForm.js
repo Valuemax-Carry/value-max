@@ -5,16 +5,74 @@ import { useState } from "react";
 export default function ApplyForm({ openForm, setOpenForm }) {
   const [fileName, setFileName] = useState("");
   const [preview, setPreview] = useState(null);
+  const [file, setFile] = useState(null);
+  const [status, setStatus] = useState("idle");
+  const [formValues, setFormValues] = useState({
+    firstName: "",
+    lastName: "",
+    dob: "",
+    gender: "",
+    cnic: "",
+    cell: "",
+    email: "",
+    qualification: "",
+    position: "",
+    message: "",
+  });
 
   if (!openForm) return null;
 
+  const handleChange = (e) => {
+    setFormValues({ ...formValues, [e.target.name]: e.target.value });
+  };
+
   const handleFile = (e) => {
-    const file = e.target.files?.[0];
-    setFileName(file?.name || "");
-    if (file && file.type.startsWith("image/")) {
-      setPreview(URL.createObjectURL(file));
+    const selected = e.target.files?.[0];
+    setFile(selected || null);
+    setFileName(selected?.name || "");
+    if (selected && selected.type.startsWith("image/")) {
+      setPreview(URL.createObjectURL(selected));
     } else {
       setPreview(null);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    const data = new FormData();
+    Object.entries(formValues).forEach(([key, value]) => data.append(key, value));
+    if (file) data.append("file", file);
+
+    try {
+      const res = await fetch("/api/apply", {
+        method: "POST",
+        body: data,
+      });
+      const result = await res.json();
+      if (result.success) {
+        setStatus("success");
+        setFormValues({
+          firstName: "",
+          lastName: "",
+          dob: "",
+          gender: "",
+          cnic: "",
+          cell: "",
+          email: "",
+          qualification: "",
+          position: "",
+          message: "",
+        });
+        setFile(null);
+        setFileName("");
+        setPreview(null);
+      } else {
+        setStatus("error");
+      }
+    } catch (err) {
+      setStatus("error");
     }
   };
 
@@ -51,6 +109,12 @@ export default function ApplyForm({ openForm, setOpenForm }) {
           box-shadow: 0 8px 24px rgba(232,0,28,0.28);
         }
         .vm-apply-btn:active { transform: translateY(0); }
+        .vm-apply-btn:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+          transform: none;
+          box-shadow: none;
+        }
 
         .vm-apply-upload {
           transition: all 0.2s cubic-bezier(0.22,1,0.36,1);
@@ -62,16 +126,20 @@ export default function ApplyForm({ openForm, setOpenForm }) {
       `}</style>
 
       <div className="vm-apply vm-apply-panel bg-white">
-        <div className="text-center mb-8">
-          <div className="text-[11px] uppercase tracking-[3px] text-[#E8001C] font-bold mb-2">
-            Join Our Team
+        <div className="px-5 sm:px-8 pb-20 max-w-5xl mx-auto">
+          <div className="text-center mb-8">
+            <div className="text-[11px] uppercase tracking-[3px] text-[#E8001C] font-bold mb-2">
+              Join Our Team
+            </div>
+            <h2 className="vm-apply-display text-2xl sm:text-3xl font-extrabold text-gray-900">
+              Apply Now
+            </h2>
           </div>
-          <h2 className="vm-apply-display text-2xl sm:text-3xl font-extrabold text-gray-900">
-            Apply Now
-          </h2>
-        </div>
-        <div className="px-5 sm:px-8 pb-20 max-w-5xl">
-          <form className="flex flex-col lg:flex-row lg:items-start gap-10">
+
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col lg:flex-row lg:items-start gap-10"
+          >
             <div className="flex flex-col gap-5 w-full">
               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6">
                 <label className="text-xs font-bold text-gray-800 uppercase tracking-wide sm:w-40 sm:shrink-0 sm:text-right">
@@ -79,7 +147,11 @@ export default function ApplyForm({ openForm, setOpenForm }) {
                 </label>
                 <input
                   type="text"
+                  name="firstName"
+                  value={formValues.firstName}
+                  onChange={handleChange}
                   placeholder="Enter first name"
+                  required
                   className="vm-apply-input w-full sm:max-w-md border-2 border-gray-200 rounded-xl px-4 py-2.5 text-sm text-gray-800 bg-white"
                 />
               </div>
@@ -90,7 +162,11 @@ export default function ApplyForm({ openForm, setOpenForm }) {
                 </label>
                 <input
                   type="text"
+                  name="lastName"
+                  value={formValues.lastName}
+                  onChange={handleChange}
                   placeholder="Enter last name"
+                  required
                   className="vm-apply-input w-full sm:max-w-md border-2 border-gray-200 rounded-xl px-4 py-2.5 text-sm text-gray-800 bg-white"
                 />
               </div>
@@ -101,6 +177,9 @@ export default function ApplyForm({ openForm, setOpenForm }) {
                 </label>
                 <input
                   type="text"
+                  name="dob"
+                  value={formValues.dob}
+                  onChange={handleChange}
                   placeholder="DD/MM/YYYY"
                   className="vm-apply-input w-full sm:max-w-md border-2 border-gray-200 rounded-xl px-4 py-2.5 text-sm text-gray-800 bg-white"
                 />
@@ -110,7 +189,12 @@ export default function ApplyForm({ openForm, setOpenForm }) {
                 <label className="text-xs font-bold text-gray-800 uppercase tracking-wide sm:w-40 sm:shrink-0 sm:text-right">
                   Gender
                 </label>
-                <select className="vm-apply-input w-full sm:max-w-md border-2 border-gray-200 rounded-xl px-4 py-2.5 text-sm text-gray-800 bg-white">
+                <select
+                  name="gender"
+                  value={formValues.gender}
+                  onChange={handleChange}
+                  className="vm-apply-input w-full sm:max-w-md border-2 border-gray-200 rounded-xl px-4 py-2.5 text-sm text-gray-800 bg-white"
+                >
                   <option value="">Choose Option</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
@@ -124,6 +208,9 @@ export default function ApplyForm({ openForm, setOpenForm }) {
                 </label>
                 <input
                   type="text"
+                  name="cnic"
+                  value={formValues.cnic}
+                  onChange={handleChange}
                   placeholder="#####-#######-#"
                   className="vm-apply-input w-full sm:max-w-md border-2 border-gray-200 rounded-xl px-4 py-2.5 text-sm text-gray-800 bg-white"
                 />
@@ -135,7 +222,11 @@ export default function ApplyForm({ openForm, setOpenForm }) {
                 </label>
                 <input
                   type="tel"
+                  name="cell"
+                  value={formValues.cell}
+                  onChange={handleChange}
                   placeholder="03XX-XXXXXXX"
+                  required
                   className="vm-apply-input w-full sm:max-w-md border-2 border-gray-200 rounded-xl px-4 py-2.5 text-sm text-gray-800 bg-white"
                 />
               </div>
@@ -146,7 +237,11 @@ export default function ApplyForm({ openForm, setOpenForm }) {
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  value={formValues.email}
+                  onChange={handleChange}
                   placeholder="you@example.com"
+                  required
                   className="vm-apply-input w-full sm:max-w-md border-2 border-gray-200 rounded-xl px-4 py-2.5 text-sm text-gray-800 bg-white"
                 />
               </div>
@@ -157,6 +252,9 @@ export default function ApplyForm({ openForm, setOpenForm }) {
                 </label>
                 <input
                   type="text"
+                  name="qualification"
+                  value={formValues.qualification}
+                  onChange={handleChange}
                   placeholder="e.g. BBA, Intermediate"
                   className="vm-apply-input w-full sm:max-w-md border-2 border-gray-200 rounded-xl px-4 py-2.5 text-sm text-gray-800 bg-white"
                 />
@@ -166,7 +264,12 @@ export default function ApplyForm({ openForm, setOpenForm }) {
                 <label className="text-xs font-bold text-gray-800 uppercase tracking-wide sm:w-40 sm:shrink-0 sm:text-right">
                   Position Applying For
                 </label>
-                <select className="vm-apply-input w-full sm:max-w-md border-2 border-gray-200 rounded-xl px-4 py-2.5 text-sm text-gray-800 bg-white">
+                <select
+                  name="position"
+                  value={formValues.position}
+                  onChange={handleChange}
+                  className="vm-apply-input w-full sm:max-w-md border-2 border-gray-200 rounded-xl px-4 py-2.5 text-sm text-gray-800 bg-white"
+                >
                   <option value="">Select a position</option>
                   <option value="cashier">Cashier</option>
                   <option value="sales-associate">Sales Associate</option>
@@ -183,18 +286,32 @@ export default function ApplyForm({ openForm, setOpenForm }) {
                 </label>
                 <textarea
                   rows={3}
+                  name="message"
+                  value={formValues.message}
+                  onChange={handleChange}
                   placeholder="Tell us a bit about yourself"
                   className="vm-apply-input w-full sm:max-w-md border-2 border-gray-200 rounded-xl px-4 py-2.5 text-sm text-gray-800 bg-white resize-none"
                 />
               </div>
 
-              <div className="flex justify-center sm:justify-start sm:pl-[184px] mt-3">
+              <div className="flex flex-col items-center sm:items-start sm:pl-[184px] mt-3 gap-3">
                 <button
                   type="submit"
+                  disabled={status === "loading"}
                   className="vm-apply-btn bg-[#b60a01] hover:bg-[#c0001a] text-white font-bold text-sm px-10 py-3.5 rounded-xl border-none cursor-pointer uppercase tracking-wide"
                 >
-                  Submit Application
+                  {status === "loading" ? "Sending..." : "Submit Application"}
                 </button>
+                {status === "success" && (
+                  <p className="text-green-600 text-sm font-semibold">
+                    Application sent successfully!
+                  </p>
+                )}
+                {status === "error" && (
+                  <p className="text-[#E8001C] text-sm font-semibold">
+                    Something went wrong. Please try again.
+                  </p>
+                )}
               </div>
             </div>
 

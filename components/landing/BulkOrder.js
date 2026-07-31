@@ -77,7 +77,7 @@ export default function BulkOrder() {
       ),
       title: "Wholesale Pricing",
       desc: "Special rates and credit terms approved per account",
-    },
+    }, 
     {
       icon: (
         <svg
