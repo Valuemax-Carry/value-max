@@ -180,7 +180,7 @@ export default function ApplyForm({ openForm, setOpenForm }) {
                   Date of Birth
                 </label>
                 <input
-                  type="text"
+                  type="date"
                   name="dob"
                   value={formValues.dob}
                   onChange={handleChange}
