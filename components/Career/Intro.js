@@ -113,6 +113,7 @@ export default function Intro() {
         </div>
       </section>
 
+
       <ApplyForm openForm={openForm} setOpenForm={setOpenForm} />
     </>
   );
