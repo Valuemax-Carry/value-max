@@ -7,29 +7,112 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-export const CATEGORIES = [
-  { id: 1, slug: "baby-care", title: "Baby Care", image: "/ProdcutsBanner/4.png" },
-  { id: 2, slug: "drinks-beverages", title: "Drinks & Beverages", image: "/ProdcutsBanner/5.png" },
-  { id: 3, slug: "snacks", title: "Snacks", image: "/ProdcutsBanner/6.png" },
-  { id: 4, slug: "tea-coffee", title: "Tea & Coffee", image: "/ProdcutsBanner/7.png" },
-  { id: 5, slug: "dairy", title: "Dairy Products", image: "/ProdcutsBanner/8.png" },
-  { id: 6, slug: "pulses", title: "Pulses", image: "/ProdcutsBanner/9.png" },
-  { id: 7, slug: "Rice", title: "Rice", image: "/ProdcutsBanner/10.png" },
-  { id: 8, slug: "oil-ghee", title: "Oil & Ghee", image: "/ProdcutsBanner/11.png" },
-  { id: 9, slug: "flour", title: "Flour", image: "/ProdcutsBanner/12.png" },
-  { id: 10, slug: "sugar", title: "Sugar", image: "/ProdcutsBanner/13.png" },
-  { id: 11, slug: "detergents", title: "Detergents", image: "/ProdcutsBanner/14.png" },
-  { id: 12, slug: "icecream", title: "IceCream", image: "/ProdcutsBanner/17.png" },
-  { id: 13, slug: "frozen", title: "Frozen", image: "/ProdcutsBanner/16.png" },
-];
+// Fallback image if a category has no product image for some reason
+const FALLBACK_IMAGE = "/ProdcutsBanner/4.png";
+
+// Converts a category title into a URL-friendly slug (used for /products/[slug])
+function slugify(str = "") {
+  return str
+    .toString()
+    .trim()
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+// Safely builds a usable <img src> from the API's productImage object
+// Handles: { data: "base64string", contentType } and Mongo Buffer-style shapes
+function getImageSrc(productImage) {
+  if (!productImage) return FALLBACK_IMAGE;
+
+  const contentType = productImage.contentType || "image/jpeg";
+  let raw = productImage.data;
+
+  if (raw && typeof raw === "object") {
+    if (raw.$binary?.base64) {
+      raw = raw.$binary.base64;
+    } else if (Array.isArray(raw.data)) {
+      try {
+        raw = btoa(
+          new Uint8Array(raw.data).reduce(
+            (acc, byte) => acc + String.fromCharCode(byte),
+            ""
+          )
+        );
+      } catch {
+        raw = null;
+      }
+    } else {
+      raw = null;
+    }
+  }
+
+  if (!raw || typeof raw !== "string") return FALLBACK_IMAGE;
+
+  // Already a data URL or a normal URL/path
+  if (raw.startsWith("data:") || raw.startsWith("http") || raw.startsWith("/")) {
+    return raw;
+  }
+
+  return `data:${contentType};base64,${raw}`;
+}
 
 export default function Categories() {
   const [visible, setVisible] = useState(false);
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
   const swiperRef = useRef(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 80);
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    async function fetchCategories() {
+      try {
+        const res = await fetch(
+          "https://api.valuemax.com.pk/api/products/all-products"
+        );
+        if (!res.ok) throw new Error("Failed to fetch products");
+        const products = await res.json();
+
+        // Build one category entry per unique productCategories value,
+        // using the first matching product's image as the category thumbnail
+        const seen = new Map();
+
+        (Array.isArray(products) ? products : []).forEach((product) => {
+          const title = product?.productCategories;
+          if (!title) return;
+
+          if (!seen.has(title)) {
+            seen.set(title, {
+              id: product._id || title,
+              slug: slugify(title),
+              title,
+              image: getImageSrc(product.productImage),
+            });
+          }
+        });
+
+        if (isMounted) {
+          setCategories(Array.from(seen.values()));
+        }
+      } catch (err) {
+        console.error("Error fetching categories:", err);
+        if (isMounted) setCategories([]);
+      } finally {
+        if (isMounted) setLoading(false);
+      }
+    }
+
+    fetchCategories();
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (
@@ -200,47 +283,49 @@ export default function Categories() {
               ›
             </button>
 
-            <Swiper
-              ref={swiperRef}
-              modules={[Navigation, Autoplay]}
-              spaceBetween={18}
-              slidesPerView={1}
-              breakpoints={{
-                480: { slidesPerView: 2, spaceBetween: 16 },
-                768: { slidesPerView: 3, spaceBetween: 18 },
-                1024: { slidesPerView: 4, spaceBetween: 20 },
-                1280: { slidesPerView: 5, spaceBetween: 20 },
-              }}
-              navigation={{
-                prevEl: ".swiper-cat-prev",
-                nextEl: ".swiper-cat-next",
-              }}
-              autoplay={{ delay: 3500, disableOnInteraction: false }}
-              loop={true}
-              className="categories-swiper"
-            >
-              {CATEGORIES.map((category) => (
-                <SwiperSlide key={category.id} className="w-full">
-                  <Link href={`/products/${category.slug}`} className="block w-full">
-                    <div className="category-card-inner">
-                      <img
-                        src={category.image}
-                        alt={category.title || `Category ${category.id}`}
-                        className="category-image"
-                      />
-                      <div className="category-label">
-                        <p className="text-white font-bold text-[14px] leading-snug drop-shadow-md">
-                          {category.title}
-                        </p>
-                        <span className="category-btn">
-                          Explore →
-                        </span>
+            {!loading && categories.length > 0 && (
+              <Swiper
+                ref={swiperRef}
+                modules={[Navigation, Autoplay]}
+                spaceBetween={18}
+                slidesPerView={1}
+                breakpoints={{
+                  480: { slidesPerView: 2, spaceBetween: 16 },
+                  768: { slidesPerView: 3, spaceBetween: 18 },
+                  1024: { slidesPerView: 4, spaceBetween: 20 },
+                  1280: { slidesPerView: 5, spaceBetween: 20 },
+                }}
+                navigation={{
+                  prevEl: ".swiper-cat-prev",
+                  nextEl: ".swiper-cat-next",
+                }}
+                autoplay={{ delay: 3500, disableOnInteraction: false }}
+                loop={true}
+                className="categories-swiper"
+              >
+                {categories.map((category) => (
+                  <SwiperSlide key={category.id} className="w-full">
+                    <Link href={`/products/${category.slug}`} className="block w-full">
+                      <div className="category-card-inner">
+                        <img
+                          src={category.image}
+                          alt={category.title || `Category ${category.id}`}
+                          className="category-image"
+                        />
+                        <div className="category-label">
+                          <p className="text-white font-bold text-[14px] leading-snug drop-shadow-md">
+                            {category.title}
+                          </p>
+                          <span className="category-btn">
+                            Explore →
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  </Link>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                    </Link>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            )}
 
           </div>
         </div>
