@@ -25,7 +25,7 @@ export default function Page({ params }) {
 
       if (s) {
         try {
-          const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/category/${s}`);
+          const res = await fetch(`${process.env.NEXT_PUBLIC_API_ORIGIN}/products/category/${s}`);
           const data = await res.json();
           setProducts(data.success ? data.products : []);
         } catch (err) {
