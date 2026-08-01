@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import BuyModal from "../../../components/app-shell/BuyModal";
 
 export default function Page({ params }) {
+  const API_ORIGIN = process.env.NEXT_PUBLIC_API_ORIGIN;
   const [slug, setSlug] = useState("");
   const [products, setProducts] = useState([]);
   const [selectedCompany, setSelectedCompany] = useState("All");
@@ -25,7 +26,9 @@ export default function Page({ params }) {
 
       if (s) {
         try {
-          const res = await fetch(`${process.env.NEXT_PUBLIC_API_ORIGIN}/products/category/${s}`);
+          const res = await fetch(`${API_ORIGIN}/api/products/category/${s}`, {
+            method: "GET",
+          });
           const data = await res.json();
           setProducts(data.success ? data.products : []);
         } catch (err) {
