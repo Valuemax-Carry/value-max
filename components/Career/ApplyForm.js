@@ -344,7 +344,7 @@ export default function ApplyForm({ openForm, setOpenForm }) {
                       <line x1="12" y1="4" x2="12" y2="16" />
                     </svg>
                     <span className="text-xs font-medium text-gray-500">
-                      Upload Image
+                      Upload CV
                     </span>
                   </>
                 )}
