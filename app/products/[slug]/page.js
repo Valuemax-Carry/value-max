@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getProductsBySlug } from "../../../data/categories";
 import BuyModal from "../../../components/app-shell/BuyModal";
 
 export default function Page({ params }) {
@@ -16,15 +15,24 @@ export default function Page({ params }) {
   const WHATSAPP_NUMBER = "03085518210";
   const EMAIL = "valuemaxcc@gmail.com";
   const LOCATION = "Islam Plaza, Main Bazar, Chak Beli Khan, Postal Code 47600, Tehsil & District Rawalpindi";
-    const MAPS_LINK = "https://maps.app.goo.gl/2FuBRsf7LCJKKZ1C8";
-
+  const MAPS_LINK = "https://maps.app.goo.gl/2FuBRsf7LCJKKZ1C8";
 
   useEffect(() => {
     async function init() {
       const { slug: rawSlug } = await params;
       const s = Array.isArray(rawSlug) ? rawSlug[0] : rawSlug ?? "";
       setSlug(s);
-      setProducts(s ? getProductsBySlug(s) : []);
+
+      if (s) {
+        try {
+          const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/category/${s}`);
+          const data = await res.json();
+          setProducts(data.success ? data.products : []);
+        } catch (err) {
+          setProducts([]);
+        }
+      }
+
       setMounted(true);
     }
     init();
@@ -228,7 +236,7 @@ export default function Page({ params }) {
                     <div className="px-4 py-4">
                       <p className="font-semibold text-gray-900 text-[14px] leading-snug mb-3 line-clamp-2">{p.name}</p>
                       <div className="flex items-center justify-between">
-                                                <button
+                        <button
                           onClick={() => setBuyProduct(p)}
                           className="bg-[#b60a01] hover:bg-[#9a0800] text-white text-[11px] font-bold px-3.5 py-1.5 rounded-lg transition-colors duration-150"
                         >
