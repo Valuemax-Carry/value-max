@@ -212,7 +212,7 @@ export default function Footer() {
                   Est. 2025 — Rawalpindi
                 </div>
                 <h2 className="ft-display text-[1.9rem] font-extrabold text-white leading-tight mb-1">
-                  Value <span className="text-[#b60a01]">Max</span> 
+                  Value<span className="text-[#b60a01]">Max</span> 
                 </h2>
                 <p className="text-[#FFD100]/70 text-xs font-semibold uppercase tracking-[3px]">Wholesale & Retail</p>
               </div>
