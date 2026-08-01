@@ -27,6 +27,7 @@ export default function Page({ params }) {
         try {
           const res = await fetch(`https://api.valuemax.com.pk/api/products/category/${s}`, {
             method: "GET",
+            credentials: "include"
           });
           const data = await res.json();
           setProducts(data.success ? data.products : []);
