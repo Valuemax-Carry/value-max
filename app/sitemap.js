@@ -1,6 +1,20 @@
-import { CATEGORY_SLUGS } from "../data/categories";
-
 const BASE_URL = "https://valuemax.com.pk";
+
+const CATEGORY_SLUGS = [
+  "baby-care",
+  "snacks",
+  "tea-coffee",
+  "pulses",
+  "rice",
+  "dairy",
+  "flour",
+  "oil-ghee",
+  "sugar",
+  "detergents",
+  "frozen",
+  "icecream",
+  "drinks-beverages",
+];
 
 export default async function sitemap() {
   const pages = [
