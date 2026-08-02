@@ -239,7 +239,7 @@ export default function Page({ params }) {
                     <div className="px-4 py-4">
                       <p className="font-semibold text-gray-900 text-[14px] leading-snug mb-3 line-clamp-2">{p.name}</p>
                       <p className="font-semibold text-[#b60a01] text-[14px]
-                      leading-snug mb-2">Rs.{p.productPrice}</p>
+                      leading-snug mb-2">Rs.{p.price}</p>
                       <div className="flex items-center justify-between">
                         <button
                           onClick={() => setBuyProduct(p)}
