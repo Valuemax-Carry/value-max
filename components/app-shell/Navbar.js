@@ -32,7 +32,7 @@ export default function Navbar() {
   useEffect(() => {
     async function fetchCategories() {
       try {
-        const res = await fetch(`${API_ORIGIN}/category/all-categories`, { method: "GET" });
+        const res = await fetch("https://api.valuemax.com.pk/api/category/all-categories", { method: "GET" });
         const data = await res.json();
         if (data.success) {
           setFetchedCategories(data.categories);
