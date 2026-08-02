@@ -26,10 +26,28 @@ export const CATEGORIES = [
 export default function Categories() {
   const [visible, setVisible] = useState(false);
   const swiperRef = useRef(null);
+  const [fetchedCategories, setFetchedCategories] = useState([]);
 
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 80);
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    async function fetchCategories() {
+      try {
+        const res = await fetch("https://api.valuemax.com.pk/api/category/all-categories", { method: "GET" });
+        const data = await res.json();
+        if (data.success) {
+          setFetchedCategories(data.categories);
+        } else {
+          setFetchedCategories([]);
+        }
+      } catch (err) {
+        setFetchedCategories([]);
+      }
+    }
+    fetchCategories();
   }, []);
 
   return (
@@ -219,18 +237,18 @@ export default function Categories() {
               loop={true}
               className="categories-swiper"
             >
-              {CATEGORIES.map((category) => (
-                <SwiperSlide key={category.id} className="w-full">
+              {fetchedCategories.map((category) => (
+                <SwiperSlide key={category._id} className="w-full">
                   <Link href={`/products/${category.slug}`} className="block w-full">
                     <div className="category-card-inner">
                       <img
-                        src={category.image}
-                        alt={category.title || `Category ${category.id}`}
+                        src={category.categoryImage?.url}
+                        alt={category.name || "Category"}
                         className="category-image"
                       />
                       <div className="category-label">
                         <p className="text-white font-bold text-[14px] leading-snug drop-shadow-md">
-                          {category.title}
+                          {category.name}
                         </p>
                         <span className="category-btn">
                           Explore →
