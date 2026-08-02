@@ -50,6 +50,21 @@ export default function Categories() {
     fetchCategories();
   }, []);
 
+  const combinedCategories = [
+    ...CATEGORIES.map((category) => ({
+      id: `static-${category.id}`,
+      slug: category.slug,
+      title: category.title,
+      image: category.image,
+    })),
+    ...fetchedCategories.map((category) => ({
+      id: category._id,
+      slug: category.slug,
+      title: category.name,
+      image: category.categoryImage?.url,
+    })),
+  ];
+
   return (
     <>
       <style>{`
@@ -237,18 +252,18 @@ export default function Categories() {
               loop={true}
               className="categories-swiper"
             >
-              {fetchedCategories.map((category) => (
-                <SwiperSlide key={category._id} className="w-full">
+              {combinedCategories.map((category) => (
+                <SwiperSlide key={category.id} className="w-full">
                   <Link href={`/products/${category.slug}`} className="block w-full">
                     <div className="category-card-inner">
                       <img
-                        src={category.categoryImage?.url}
-                        alt={category.name || "Category"}
+                        src={category.image}
+                        alt={category.title || "Category"}
                         className="category-image"
                       />
                       <div className="category-label">
                         <p className="text-white font-bold text-[14px] leading-snug drop-shadow-md">
-                          {category.name}
+                          {category.title}
                         </p>
                         <span className="category-btn">
                           Explore →
