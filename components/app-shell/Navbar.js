@@ -7,6 +7,8 @@ import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
 import { CATEGORIES } from "../landing/Categories";
 
+const API_ORIGIN = process.env.NEXT_PUBLIC_API_ORIGIN;
+
 const NAV_LINKS = [
   { label: "Home", path: "/" },
   { label: "Categories", path: "/#categories" },
@@ -22,12 +24,41 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeIndex, setActiveIndex] = useState(-1);
+  const [fetchedCategories, setFetchedCategories] = useState([]);
   const router = useRouter();
   const pathname = usePathname();
   const isActive = (link) => link.path === pathname;
 
+  useEffect(() => {
+    async function fetchCategories() {
+      try {
+        const res = await fetch(`${API_ORIGIN}/category/all-categories`, { method: "GET" });
+        const data = await res.json();
+        if (data.success) {
+          setFetchedCategories(data.categories);
+        } else {
+          setFetchedCategories([]);
+        }
+      } catch (err) {
+        setFetchedCategories([]);
+      }
+    }
+    fetchCategories();
+  }, []);
+
+  const combinedCategories = [
+    ...CATEGORIES.map((category) => ({
+      slug: category.slug,
+      title: category.title,
+    })),
+    ...fetchedCategories.map((category) => ({
+      slug: category.slug,
+      title: category.name,
+    })),
+  ];
+
   const matched = searchQuery.trim()
-    ? CATEGORIES.filter(c =>
+    ? combinedCategories.filter(c =>
         c.title.toLowerCase().startsWith(searchQuery.trim().toLowerCase())
       )
     : [];
