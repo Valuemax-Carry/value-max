@@ -222,9 +222,9 @@ export default function Page({ params }) {
                     className="vm-card card-in bg-white rounded-2xl overflow-hidden shadow-sm cursor-pointer"
                     style={{ animationDelay: `${i * 0.04}s` }}
                   >
-                    <div className="relative w-full h-44 bg-gray-50 overflow-hidden">
+                    <div className="relative w-full h-44 bg-gray-50 overflow-hidden flex items-center justify-center">
                       {p.img ? (
-                        <img src={p.img} alt={p.name} className="w-full h-full object-cover" />
+                        <img src={p.img} alt={p.name} className="max-w-full max-h-full w-auto h-auto object-contain" />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center">
                           <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" strokeWidth="1.2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
@@ -239,7 +239,7 @@ export default function Page({ params }) {
                     <div className="px-4 py-4">
                       <p className="font-semibold text-gray-900 text-[14px] leading-snug mb-3 line-clamp-2">{p.name}</p>
                       <p className="font-semibold text-[#b60a01] text-[14px]
-                      leading-snug mb-2">Rs.{p.price}</p>
+                      leading-snug mb-2">{Number(p.price) === 0 ? p.price : `Rs.${p.price}`}</p>
                       <div className="flex items-center justify-between">
                         <button
                           onClick={() => setBuyProduct(p)}
