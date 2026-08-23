@@ -300,7 +300,6 @@ export default function Hero() {
                     "/HeroSwiper/2.webp",
                     "/HeroSwiper/4.webp",
                     "/HeroSwiper/1.jpg",
-                    "/HeroSwiper/12.jpg",
                     "/HeroSwiper/5.jpg",
                     "/HeroSwiper/9.png",
                     "/HeroSwiper/3.webp",
