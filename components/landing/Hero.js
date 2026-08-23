@@ -332,7 +332,7 @@ export default function Hero() {
                   {[
                     "📦 Wholesale Prices",
                     "🛒 10,000+ Products",
-                    "🚚 Free Delivery above Rs. 5,000",
+                    "🚚 Free Delivery above Rs. 15,000",
                     "⭐ Pakistan's Trusted Cash & Carry",
                     "📍 Now Open in Chak Beli Khan, Rawalpindi",
                     "💛 Ashraf & Sons Traders",
