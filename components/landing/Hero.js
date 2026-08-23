@@ -300,12 +300,12 @@ export default function Hero() {
                     "/HeroSwiper/2.webp",
                     "/HeroSwiper/4.webp",
                     "/HeroSwiper/1.jpg",
-                    "/HeroSwiper/7.jpg",
+                    "/HeroSwiper/12.jpg",
                     "/HeroSwiper/5.jpg",
                     "/HeroSwiper/9.jpg",
                     "/HeroSwiper/3.webp",
                     "/HeroSwiper/10.jpg",
-                    "/HeroSwiper/8.jpg",
+                    "/HeroSwiper/11.jpg",
                   ].map((src, i) => (
                     <SwiperSlide key={i}>
                       <img
