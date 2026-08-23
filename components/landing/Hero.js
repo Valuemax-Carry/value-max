@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const STATS = [
   { value: "10,000+", label: "Products" },
-  { value: "Rs. 5K", label: "Free Delivery Above" },
+  { value: "Rs. 15K", label: "Free Delivery Above" },
   { value: "1st", label: "Physical Store" },
   { value: "100%", label: "Wholesale Prices" },
 ];
@@ -334,7 +334,7 @@ export default function Hero() {
                     "🛒 10,000+ Products",
                     "🚚 Free Delivery above Rs. 5,000",
                     "⭐ Pakistan's Trusted Cash & Carry",
-                    "📍 Now Open in Rawalpindi",
+                    "📍 Now Open in Chak Beli Khan, Rawalpindi",
                     "💛 Ashraf & Sons Traders",
                     "📦 Bulk Orders Welcome",
                     "🔥 New Deals Every Week",
