@@ -172,7 +172,7 @@ export default function PolicyPage() {
               {[
                 { value: "7 Days", label: "Easy Returns" },
                 { value: "15 km", label: "Free Delivery Radius" },
-                { value: "Rs. 5K", label: "Free Delivery Above" },
+                { value: "Rs. 15K", label: "Free Delivery Above" },
                 { value: "100%", label: "Genuine Products" },
               ].map((s, i) => (
                 <div
@@ -200,7 +200,7 @@ export default function PolicyPage() {
               <div key={r} className="flex items-center">
                 {[
                   "↩️ 7-Day Returns",
-                  "🚚 Free Delivery above Rs. 5,000",
+                  "🚚 Free Delivery above Rs. 15,000",
                   "📍 Within 15 km of Rawalpindi",
                   "📦 Bulk Orders Welcome",
                   "⭐ 100% Genuine Products",
@@ -223,7 +223,7 @@ export default function PolicyPage() {
         <div className="max-w-[1280px] mx-auto px-5 sm:px-8 py-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
           {[
             { icon: "↩️", title: "7-Day Returns", desc: "Changed your mind? Return any eligible product within 7 days — no fuss, no stress." },
-            { icon: "🚚", title: "Free Delivery", desc: "Orders above Rs. 5,000 delivered free within a 15 km radius of our Rawalpindi store." },
+            { icon: "🚚", title: "Free Delivery", desc: "Orders above Rs. 15,000 delivered free within a 15 km radius of our Rawalpindi store." },
             { icon: "📦", title: "Bulk Welcome", desc: "From retailers to restaurants — wholesale pricing available for all verified bulk buyers." },
           ].map((f, i) => (
             <div
