@@ -19,8 +19,8 @@ const sections = [
     icon: "🚚",
     title: "Free Delivery Policy",
     content: [
-      "ValueMax offers free home delivery on all orders above Rs. 5,000 within a 15 km radius of our Rawalpindi store.",
-      "Orders below Rs. 5,000 are subject to a standard delivery fee calculated based on distance and order weight.",
+      "ValueMax offers free home delivery on all orders above Rs. 15,000 within a 15 km radius of our Rawalpindi store.",
+      "Orders below Rs. 15,000 are subject to a standard delivery fee calculated based on distance and order weight.",
       "Delivery is available 6 days a week, Sunday through Friday, between 10:00 AM and 7:00 PM.",
       "Same-day delivery is available for orders placed before 1:00 PM, subject to rider availability.",
       "Delivery timelines may vary during peak hours, public holidays, or extreme weather conditions.",
