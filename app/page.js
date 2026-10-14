@@ -4,6 +4,7 @@ import Categories from "@/components/landing/Categories";
 import Contact from "@/components/landing/Contact";
 import Deals from "@/components/landing/Deals";
 import Hero from "@/components/landing/Hero";
+import JobAdd from "@/components/landing/JobAdd";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
     <Categories />
     <Deals />
     <BulkOrder />
+    <JobAdd />
     <Contact />
     </>
   );
